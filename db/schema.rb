@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150729225054) do
+ActiveRecord::Schema.define(version: 20150729231045) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 20150729225054) do
     t.string   "high_level_goal"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "username"
+    t.string   "password_digest"
   end
+
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end
