@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  end_date: 2015-07-29
+  date_done: 2015-07-29
+  metric: 1.5
+
+two:
+  title: MyString
+  description: MyString
+  end_date: 2015-07-29
+  date_done: 2015-07-29
+  metric: 1.5
