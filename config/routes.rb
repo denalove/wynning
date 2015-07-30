@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resource :activities
+  resources :activities
   # You can have the root of your site routed with "root"
   resources :sessions
   resources :users
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'users' => 'users#index'
   root 'welcome#index'
+  delete 'logout' => 'sessions#destroy'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
