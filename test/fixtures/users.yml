@@ -5,6 +5,7 @@ one:
   first_name: MyString
   last_name: MyString
   membership_level: 1
+  password_digest: password
   high_level_goal: MyString
 
 two:
@@ -12,4 +13,5 @@ two:
   first_name: MyString
   last_name: MyString
   membership_level: 1
+  password_digest: password
   high_level_goal: MyString
