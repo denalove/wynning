@@ -1,2 +1,46 @@
-<h1>Welcome!</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Create Profile</h1>
+<%= form_for @user do |f| %>
+	<p>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</p>
+	<p>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</p>
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :phone_number %>
+		<%= f.text_field :phone_number %>
+	</p>
+	<p>
+		<%= f.label :high_level_goal %>
+		<%= f.text_field :high_level_goal %>
+	</p>
+	<p>
+<%#= f.submit 'Create Profile' %>
+	</p>
+	<!-- <%# end %>
+
+<h1>Sign up</h1>
+<%#= form_for @user do |f| %> -->
+	<p>
+		<%= f.label :username %>
+		<%= f.text_field :username %>
+	</p>
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_configuration %>
+		<%= f.password_field :password_configuration %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+	<% end %>
