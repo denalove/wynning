@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   	if @user.save
       session[:user_id] = @user.id
-  		redirect_to root_path, notice: "Created user"
+  		redirect_to @user, notice: "Created user"
   	else
   		render action: 'new'
   	end

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-
-
+gem 'simple_form'
+gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -47,7 +47,10 @@ group :development, :test do
   gem 'spring'
 end
 
+
   group :test do
   	gem 'capybara', '~> 2.4.4'
 end
+
+
 
