@@ -1,6 +1,10 @@
 <h1>Create Profile</h1>
 <%= form_for @user do |f| %>
 	<p>
+		<%= f.label :high_level_goal %>
+		<%= f.text_field :high_level_goal %>
+	</p>
+	<p>
 		<%= f.label :first_name %>
 		<%= f.text_field :first_name %>
 	</p>
@@ -17,17 +21,6 @@
 		<%= f.text_field :phone_number %>
 	</p>
 	<p>
-		<%= f.label :high_level_goal %>
-		<%= f.text_field :high_level_goal %>
-	</p>
-	<p>
-<%#= f.submit 'Create Profile' %>
-	</p>
-	<!-- <%# end %>
-
-<h1>Sign up</h1>
-<%#= form_for @user do |f| %> -->
-	<p>
 		<%= f.label :username %>
 		<%= f.text_field :username %>
 	</p>
@@ -39,7 +32,6 @@
 		<%= f.label :password_configuration %>
 		<%= f.password_field :password_configuration %>
 	</p>
-	
 	<p>
 		<%= f.submit %>
 	</p>
