@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730000744) do
+ActiveRecord::Schema.define(version: 20150730222354) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
@@ -29,7 +29,10 @@ ActiveRecord::Schema.define(version: 20150730000744) do
     t.float    "metric"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "one_month_goals", ["user_id"], name: "index_one_month_goals_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

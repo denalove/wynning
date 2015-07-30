@@ -6,13 +6,17 @@ Rails.application.routes.draw do
   resources :activities
   # You can have the root of your site routed with "root"
   resources :sessions
-  resources :users
+  
+  resources :users do
+    resources :one_month_goals
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'users' => 'users#index'
   root 'welcome#index'
   delete 'logout' => 'sessions#destroy'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

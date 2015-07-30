@@ -1,3 +1,3 @@
 class Activity < ActiveRecord::Base
-  belongs_to :OneMonthGoal
+  belongs_to :one_month_goal
 end

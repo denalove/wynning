@@ -3,3 +3,14 @@
 <p>Hi <%=@user.first_name %>. We are glad you've decided to end your loser ways!</p>
 <p> Your goal of <%= @user.high_level_goal %> is cute... </p>
 <p> We will now spam your inbox at <%= @user.email %> and call you constantly at <%=@user.phone_number %>
+
+<h2> One Month Goals</h2>
+<% if @user.one_month_goals.blank? %>
+  <h2>Add a goal tubby!</h2>
+<% else %>
+  <ul>
+    <% @user.one_month_goals.each do |gol| %>
+    <li><%= link_to gol.name, gol %></li>
+    <% end %>
+  </ul>
+  <% end %>
