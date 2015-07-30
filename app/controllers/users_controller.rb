@@ -1,14 +1,15 @@
 class UsersController < ApplicationController
   def new
-  	@user = User.new
+    @user = User.new
   end
 
-  # def index
-  # 	@users = User.all 
-  #   render :new
-  # end
 
   def show
+    @user = current_user
+  end
+
+  def index
+    @users = User.all
   end
 
 
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   	@user = User.new user_params
 
   	if @user.save
+      session[:user_id] = @user.id
   		redirect_to root_path, notice: "Created user"
   	else
   		render action: 'new'
@@ -25,7 +27,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-  	params.require(:user).permit(:username, :password, :password_confirmation)
+  	params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :high_level_goal, :email, :phone_number)
   end
 
 end
