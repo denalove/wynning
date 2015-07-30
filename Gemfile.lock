@@ -183,11 +183,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.3)
-<<<<<<< HEAD
   rspec-rails (~> 3.3.0)
-=======
   rails_12factor
->>>>>>> 589673f6ea36c7a22f0e845ba9608663521eb6f1
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
