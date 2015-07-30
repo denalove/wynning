@@ -1,0 +1,61 @@
+<h1>Welcome to the Questions Page!</h1>
+<p>What... is the air-speed velocity of an unladen swallow?</p>
+
+
+<%= form_for @user do |user_questions| %>
+  <% @user.questions.each do |user_questions| %>
+  <% end %>
+<% end %>
+
+<p>Welcome!<%= "#{first_name}" %>What do you want to accomplish?</p>
+  <%= user_form.text_field :high_level_goal %>
+  <%= submit %>
+<!-- HIGH LEVEL GOAL [SUBMIT]  [user :high_level_goal]
+[then added to dashboard] -->
+
+<!-- [then] -->
+
+  <p>What is your first step in achieving this goal?</p>
+  <!-- ____________________________ +ADD [oneMonth Goal :description] -->
+  <%= user_form.text_field :decription %>
+  <%= submit %>
+
+  <p>By which date do you want to achieve this first step?</p>
+  <%= datetime_local_field(:user, :end_date) %>
+  <!-- [datetime]  [oneMonthGoal :end_date]
+  [if more than a month, message “You need to achieve this step within a month.” then, refresh question]
+
+[then] -->
+
+<%= form_for @user do |step_questions| %>
+Step Questions:
+<ul>
+  <%= f.fields_for :descriptions do |step_questions_form| %>
+    <li>
+      <p>How are you going to accomplish this step?  Be Specific! Be positive! (NO: Don’t, Can’t, Won’t; YES: Do, Will, Can)</p>
+      <%= user_form.text_field :desription %>
+      <%= submit %>
+        <!-- _________________________ +ADD [activities: description] -->
+        <!-- [whatever is written here will be added to a list below] -->
+      <%= check_box_tag(:last_step) %>
+      <%= label_tag(:last_step, "This is my last step") %>
+      <!-- +button[LAST STEP] “This is my last step”
+      [when this step is added below, it is added to the daily reminders to be sent via text]
+      [form is continually replaced until last step button is pushed] -->
+      <p>How are you going to accomplish this step?  Be Specific! Be positive! (NO: Don’t, Can’t, Won’t; YES: Do, Will, Can)</p>
+      <%= user_form.text_field :desription %>
+      <%= submit %>
+        <!-- _________________________ +ADD [activities: description] -->
+        <!-- [whatever is written here will be added to a list below] -->
+      <%= check_box_tag(:last_step) %>
+      <%= label_tag(:last_step, "This is my last step") %>
+
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+<!-- [then] -->
+
+<%= select(:user, :notification, [['Text Message', 1], ['E-mail', 2], ['Both', 3]) %>
+<!-- Do you want to receive text message reminders, e-mail reminders, or both?
+[drop down box] -->
