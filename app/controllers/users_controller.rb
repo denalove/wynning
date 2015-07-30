@@ -2,9 +2,10 @@ class UsersController < ApplicationController
   def new
   end
 
-  def index
-    render :new
-  end
+  # def index
+  # 	@users = User.all 
+  #   render :new
+  # end
 
   def show
   end
