@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
+  email: ed@wyncode.co
   first_name: MyString
   last_name: MyString
   membership_level: 1
