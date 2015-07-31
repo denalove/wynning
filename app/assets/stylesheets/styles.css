@@ -45,7 +45,7 @@ a img{
   right: 20%;
   bottom: -26px;
   z-index: 3;
-  background: #64ffda !important;
+  background: #E23F26 !important;
   color: black !important;
 }
 
@@ -334,11 +334,11 @@ a img{
 
 .wynning-link {
   text-decoration: none;
-  color: #8bc34a !important;
+  color: #E23F26 !important;
 }
 
   .wynning-link:hover {
-    color: #7cb342 !important;
+    color: #1AB2AB !important;
   }
 
   .wynning-link .material-icons {
@@ -348,7 +348,7 @@ a img{
 
 .wynning-alt-link {
   text-decoration: none;
-  color: #64ffda !important;
+  color: #1AB2AB !important;
   font-size: 16px;
 }
 
