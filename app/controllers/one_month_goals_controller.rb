@@ -7,8 +7,9 @@ class OneMonthGoalsController < ApplicationController
   end
 
   def status
+    @user=current_user
   end
-  
+
   def show
     redirect_to user_path
   end
