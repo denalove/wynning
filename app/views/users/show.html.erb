@@ -11,7 +11,7 @@
 <% else %>
   <ul>
     <% @user.one_month_goals.each do |gol| %>
-    <li><%= link_to gol.name, gol %></li>
+    <li><%= link_to gol.title, gol %></li>
     <% end %>
   </ul>
   <% end %>

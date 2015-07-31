@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 
   def show
+    @one_month_goal = OneMonthGoal.new
     @user = current_user
   end
 
