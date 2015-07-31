@@ -10,7 +10,7 @@
   <%= render 'one_month_goals/form' %>
 <% else %>
   <% @user.one_month_goals.each do |gol| %>
-    <h3><%= link_to gol.title, gol %></h3>
+    <h3><%= link_to gol.title, status_path(gol) %></h3>
     <p><%= gol.description %></p>
   <% end %>
 <% end %>
