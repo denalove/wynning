@@ -6,7 +6,7 @@
 
 <h2> One Month Goals</h2>
 <% if @user.one_month_goals.blank? %>
-  <p>Add a goal Tubby!</p>
+  <p>Add a short term goal that should take no longer than a month to complete, Tubby!</p>
   <%= render 'one_month_goals/form' %>
 <% else %>
   <% @user.one_month_goals.each do |gol| %>
