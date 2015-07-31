@@ -1,0 +1,2 @@
+class OneMonthGoalsController < ApplicationController
+end
