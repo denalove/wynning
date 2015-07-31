@@ -6,6 +6,9 @@ class OneMonthGoalsController < ApplicationController
     @one_month_goals = OneMonthGoal.all
   end
 
+  def status
+  end
+  
   def show
     redirect_to user_path
   end
