@@ -9,9 +9,8 @@
   <p>Add a goal Tubby!</p>
   <%= render 'one_month_goals/form' %>
 <% else %>
-  <ul>
-    <% @user.one_month_goals.each do |gol| %>
-    <li><%= link_to gol.title, gol %></li>
-    <% end %>
-  </ul>
+  <% @user.one_month_goals.each do |gol| %>
+    <h3><%= link_to gol.title, gol %></h3>
+    <p><%= gol.description %></p>
   <% end %>
+<% end %>

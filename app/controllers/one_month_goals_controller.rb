@@ -39,6 +39,6 @@ class OneMonthGoalsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def one_month_goal_params
-      params.require(:one_month_goal).permit(:title, :user_id)
+      params.require(:one_month_goal).permit(:title, :description, :user_id)
     end
 end
