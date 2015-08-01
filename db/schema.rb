@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731221652) do
+ActiveRecord::Schema.define(version: 20150801215214) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150731221652) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "one_month_goal_id"
+    t.date     "start"
   end
 
   add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
