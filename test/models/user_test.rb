@@ -13,4 +13,10 @@ class UserTest < ActiveSupport::TestCase
     p user.errors.messages
   end
 
+  test "email should be correct format" do
+    user = User.new(email: "dena.wyncode")
+    assert_not user.save, "email is not correct format"
+    p user.errors.messages
+  end
+
 end

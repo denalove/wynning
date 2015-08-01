@@ -174,7 +174,7 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('images/slide01.jpg') center 30% no-repeat;
+  background: url('#') center 30% no-repeat;
   background-size: cover;
 }
 
@@ -184,12 +184,12 @@ a img{
   color: #767777;
   font-weight: 300;
 }
-.wynning-pier  {
+/*.wynning-pier  {
   background-image: url('/assets/images/wooden-pier-into-the-ocean.jpg');
   
   background-size: cover;
   /*background-repeat: no-repeat;*/
-}
+
 
 .wynning-slogan {
   font-size: 60px;
@@ -307,7 +307,7 @@ a img{
 
 .wynning-wear-section {
   position: relative;
-  background: url('images/wear.png') center top no-repeat;
+  background: url('#') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -377,7 +377,7 @@ a img{
   }
 
 .wynning-customized-section-image {
-  background: url('images/devices.jpg') center top no-repeat;
+  background: url('#') center top no-repeat;
   background-size: cover;
   height: 400px;
 }
