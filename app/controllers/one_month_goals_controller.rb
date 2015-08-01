@@ -6,12 +6,10 @@ class OneMonthGoalsController < ApplicationController
     @one_month_goals = OneMonthGoal.all
   end
 
-  def status
-    @user = current_user
-  end
-
   def show
-    redirect_to user_path
+    @activity = Activity.new
+    @activities = Activity.all
+    @user = current_user
   end
 
   def new

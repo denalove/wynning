@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730222354) do
+ActiveRecord::Schema.define(version: 20150731221652) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
     t.boolean  "done"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "one_month_goal_id"
   end
+
+  add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
 
   create_table "one_month_goals", force: :cascade do |t|
     t.string   "title"
