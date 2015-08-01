@@ -11,13 +11,14 @@ Rails.application.routes.draw do
     resources :one_month_goals
   end
 
-  resources :one_month_goals
+  resources :one_month_goals do
+    resource :activities
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'users' => 'users#index'
   get 'welcome' => 'welcome#index'
-  get 'status' => 'one_month_goals#status'
   delete 'logout' => 'sessions#destroy'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

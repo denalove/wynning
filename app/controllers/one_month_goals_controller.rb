@@ -1,18 +1,15 @@
 class OneMonthGoalsController < ApplicationController
-  before_action :set_one_month_goal, only: [ :show, :edit, :update, :destroy]
+  before_action :set_one_month_goal, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:create]
 
   def index
     @one_month_goals = OneMonthGoal.all
   end
 
-  def status
-    @activity = Activity.new
-    @user = current_user
-  end
-
   def show
-    redirect_to user_path
+    @activity = Activity.new
+    @activities = Activity.all
+    @user = current_user
   end
 
   def new

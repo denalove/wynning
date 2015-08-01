@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |act| %>
+      <tr>
+        <td><%= act.title %></td>
+        <td><%= act.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

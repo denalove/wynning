@@ -11,17 +11,8 @@ user_validations = function() {
 	var email = $('#user_email').val();
 	var phone_number = $('#user_phone_number').val();
 	var username = $('#user_username').val();
-	// var password = $('#user_password').val();
 	var password_confirm = $('#user_password_confirmation').val();
-	// console.log(high_level_goal);
-	// console.log(first_name);
-	// console.log(last_name);
-	// console.log(email);
-	// console.log(phone_number);
-	// console.log(username);
-	// console.log(password);
-	// console.log(password_config);
-	
+
 	var user_data = {user:{
 		high_level_goal:high_level_goal, first_name: first_name, last_name: last_name, email: email,
 		phone_number: phone_number, username: username, password_digest: password_confirm
@@ -32,6 +23,7 @@ user_validations = function() {
 		data: user_data,
 			success: function() {
         console.log('it worked!!');
+				alert("Ajaxed that shit")
       },
         error: function(request, error) {
         console.log(arguments);
