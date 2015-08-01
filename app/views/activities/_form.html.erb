@@ -1,0 +1,14 @@
+<%= form_for([@one_month_goal, @activity]) do |f| %>
+  <div class="field">
+    <%= f.label "Activity Name" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

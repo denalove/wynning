@@ -1,5 +1,5 @@
 class OneMonthGoalsController < ApplicationController
-  before_action :set_one_month_goal, only: [:show, :edit, :update, :destroy]
+  before_action :set_one_month_goal, only: [ :show, :edit, :update, :destroy]
   before_action :set_user, only: [:create]
 
   def index
@@ -7,6 +7,7 @@ class OneMonthGoalsController < ApplicationController
   end
 
   def status
+    @activity = Activity.new
     @user = current_user
   end
 
