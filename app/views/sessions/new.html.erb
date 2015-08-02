@@ -1,14 +1,8 @@
 <h1>Log in</h1>
-<%= form_tag sessions_path do %>
-	<p>
-		<%= label_tag :username %>
-		<%= text_field_tag :username %>
-	</p>
-	<p>
-		<%= label_tag :password %>
-		<%= password_field_tag :password %>
-	</p>
-	<p>
-		<%= submit_tag 'Log In' %>
-	</p>
-	<% end %>
+
+<%= link_to "Dashboard", new_user_one_month_goal_path, method: "index" %>
+<% if current_user %>
+    <p id="login">Welcome, <%= current_user.first_name.capitalize %>  | Jon:  Needs to be an automatic redirect to the dashboard so this page never loads. </p>
+<% else %>
+  <%= render 'form' %>
+<% end %>
