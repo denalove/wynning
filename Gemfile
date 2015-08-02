@@ -48,6 +48,7 @@ group :development, :test do
   gem 'spring'
 end
 
+
 group :test do
   gem 'minitest-reporters', '~> 1.0.19'
   gem 'mini_backtrace',     '0.1.3'
@@ -55,12 +56,9 @@ group :test do
 end
 
 
-  group :test, :production do
-  	gem 'pg', '0.18.2'
-
-  group :production do
-  	gem 'pg', '0.18.2'
-    gem 'rails_12factor'
+group :production do
+ gem 'pg', '0.18.2'
+ gem 'rails_12factor'
+end
 
 
-  end
