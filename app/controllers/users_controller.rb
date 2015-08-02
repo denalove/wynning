@@ -28,7 +28,7 @@ class UsersController < ApplicationController
        format.js {}
        format.json { render json: @user, status: :created, location: @user }
      else
-      format.html { render action: 'new' }
+      format.html { render action: 'new', notice: "User could not be created" }
       format.json { render json: @user.errors, status: :unprocessable_entity }
     end
   end
