@@ -1,12 +1,13 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
-  before_action :set_one_month_goal, only: [:create, :index]
+  before_action :set_one_month_goal, only: [:create, :index, :one_month_goal]
 
   def index
     @activities = Activity.all
   end
 
   def show
+    redirect_to current_user
   end
 
   def new
