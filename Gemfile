@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'minitest', '~> 5.7.0'
+
+gem 'minitest-reporters', '~> 1.0.19'
+
 
 
 # Use Unicorn as the app server
@@ -48,8 +52,13 @@ group :development, :test do
 end
 
 
+
+  group :test, :production do
+  	gem 'pg', '0.18.2'
+
   group :production do
-  	gem 'pg', '0.18.1'
+  	gem 'pg', '0.18.2'
     gem 'rails_12factor'
+
 
   end
