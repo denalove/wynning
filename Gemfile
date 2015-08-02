@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'minitest', '~> 5.7.0'
 
+gem 'minitest-reporters', '~> 1.0.19'
+
 
 
 # Use Unicorn as the app server
