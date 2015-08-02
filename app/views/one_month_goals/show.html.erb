@@ -5,7 +5,7 @@
   <% @one_month_goal.activities.each do |act| %>
     <h3><%= link_to act.title, act %></h3>
     <p><%= act.description %></p>
-    <p><%= act.score %>%</p>
+    <p><%= act.score %>%<p>
   <% end %>
 <% end %>
 <p><%= link_to "Back to your Dashboard", @user %></p>

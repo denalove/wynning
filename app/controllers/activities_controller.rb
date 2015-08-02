@@ -18,6 +18,7 @@ class ActivitiesController < ApplicationController
     @activity.one_month_goal_id = @one_month_goal.id
     @activity.start = Time.now
 
+
      respond_to do |format|
       if @activity.save
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }

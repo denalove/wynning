@@ -11,16 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801215214) do
+ActiveRecord::Schema.define(version: 20150802171855) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.boolean  "done"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "one_month_goal_id"
     t.date     "start"
+    t.boolean  "day1"
+    t.boolean  "day2"
+    t.boolean  "day3"
+    t.boolean  "day4"
+    t.boolean  "day5"
+    t.boolean  "day6"
+    t.boolean  "day7"
   end
 
   add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
