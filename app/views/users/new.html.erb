@@ -1,5 +1,5 @@
 <h1>Create Profile</h1>
-<%= form_for(@user, remote: true) do |f| %>
+<%= form_for @user do |f| %>
 	<p>
 		<%= f.label :high_level_goal %>
 		<%= f.text_field :high_level_goal %>
