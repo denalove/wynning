@@ -18,8 +18,8 @@ user_validations = function() {
 		phone_number: phone_number, username: username, password_digest: password_confirm
 	}}
 		$.ajax({
-		type: 'POST'
-		url: '/users'
+		type: 'POST',
+		url: '/users',
 		data: user_data,
 			success: function() {
         console.log('it worked!!');
