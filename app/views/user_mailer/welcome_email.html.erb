@@ -4,10 +4,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to Wynning.co, <%= @user.name %></h1>
+    <h1>Welcome to Wynning.co, <%= @user.first_name %></h1>
     <p>
       You have successfully signed up to Wynning.com,
-      your username is: <%= @user.login %>.<br>
+      your username is: <%= @user.username %>.<br>
     </p>
     <p>
       To login to the site, just follow this link: <%= @url %>.
