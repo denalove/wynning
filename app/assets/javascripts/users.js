@@ -5,7 +5,7 @@
 // user_validations = function() {
 // 	$('#create-user').on('click', function(e){
 // 	e.preventDefault();
-	
+
 // 	var high_level_goal = $('#user_high_level_goal').val();
 // 	var first_name = $('#user_first_name').val();
 // 	var last_name = $('#user_last_name').val();

@@ -1,6 +1,4 @@
 <!doctype html>
-
-
 <!-- <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,6 +8,13 @@
     <title>Wynning</title>
 
     <!-Page styles -->
+    <% if current_user %>
+        <p id="login">Welcome, <%= current_user.first_name.capitalize %>  |  <%= link_to "Log out", logout_path, method: "delete" %></p>
+    <% else %>
+      <ul>
+        <p id="login"><%= link_to "Login Loser", new_session_path %>  |  <%= link_to "Signup", new_user_path %></p>
+      </ul>
+    <% end %>
 
 
     <!-- </style> -->
@@ -50,14 +55,14 @@
             <li class="mdl-menu__item">wynning History</li>
           </ul> -->
           <span class="wynning-mobile-title mdl-layout-title">
-            <img class="wynning-logo-image" src="#">
+            <img class="wynning-logo-image ???" src="https://cdn.empowernetwork.com/user_images/post/2013/01/01/9/bb/f62d/540_293_resize_20130101_9bbf62da899140d300f5e02c6c6fb049_jpg.jpg">
           </span>
         </div>
       </div>
 
       <div class="wynning-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <img class="wynning-logo-image" src="#">
+          <img class="wynning-logo-image in slider menu" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
         </span>
         <!-- <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Phones</a>
@@ -156,7 +161,7 @@
                 So often people forget that the real power of change lies within.  There can be no real change, no step forward, until YOU decide to take that first step.  Here at Wynning!, we help guide you through that first step towards the best life for you!
               </p>
               <p>
-                <a class="mdl-typography--font-regular mdl-typography--text-uppercase wynning-alt-link" href="/users/new">
+                <a class="mdl-typography--font-regular mdl-typography--text-uppercase wynning-alt-link" href="logout_path">
                   Sign up to get started&nbsp;<i class="material-icons">chevron_right</i>
                 </a>
               </p>
