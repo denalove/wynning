@@ -41,7 +41,6 @@ gem 'minitest-reporters', '~> 1.0.19'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
   # gem 'rspec-rails', '~> 3.3.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -51,5 +50,10 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'pg', '0.18.1'
-gem 'rails_12factor'
+
+
+  	gem 'pg', '0.18.1'
+    
+  group :production do
+    gem 'rails_12factor'
+  end
