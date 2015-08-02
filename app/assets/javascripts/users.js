@@ -5,6 +5,7 @@
 user_validations = function() {
 	$('#create-user').on('click', function(e){
 	e.preventDefault();
+	
 	var high_level_goal = $('#user_high_level_goal').val();
 	var first_name = $('#user_first_name').val();
 	var last_name = $('#user_last_name').val();
@@ -22,10 +23,11 @@ user_validations = function() {
 		url: '/users',
 		data: user_data,
 			success: function() {
-        console.log('it worked!!');
-				alert("Ajaxed that shit")
+        var msgBox = '<div class="col-md-12 messageBody">' + msg + '<p class="messageTime">sent: less than a minute ago.</p><br></div>';
+        self.closest('#new_reply').before(msgBox);
+        self.parent().siblings('div.field').children('#reply_body').val("");
       },
-        error: function(request, error) {
+      error: function(request, error) {
         console.log(arguments);
         alertUser("failure");
 			}

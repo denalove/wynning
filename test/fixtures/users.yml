@@ -7,6 +7,7 @@ one:
   membership_level: 1
   password_digest: password
   high_level_goal: MyString
+  username: testusername
 
 two:
   email: MyString
@@ -15,3 +16,4 @@ two:
   membership_level: 1
   password_digest: password
   high_level_goal: MyString
+  username: testusername2
