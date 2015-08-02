@@ -1,8 +1,0 @@
-<h1>Log in</h1>
-
-<%= link_to "Dashboard", new_user_one_month_goal_path, method: "index" %>
-<% if current_user %>
-    <p id="login">Welcome, <%= current_user.first_name.capitalize %>  | Jon:  Needs to be an automatic redirect to the dashboard so this page never loads. </p>
-<% else %>
-  <%= render 'form' %>
-<% end %>
