@@ -53,12 +53,7 @@ group :test do
   gem 'guard-minitest',     '2.3.1'
 end
 
-
-
-  	gem 'pg', '0.18.2'
-    gem 'rails_12factor'
-
 group :production do
- gem 'pg', '0.18.2'
+ gem 'pg', '0.18.1'
  gem 'rails_12factor'
 end
