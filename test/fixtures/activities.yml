@@ -3,9 +3,8 @@
 one:
   title: MyString
   description: MyString
-  done: false
+
 
 two:
   title: MyString
   description: MyString
-  done: false
