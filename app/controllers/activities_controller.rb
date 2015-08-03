@@ -33,7 +33,7 @@ class ActivitiesController < ApplicationController
   end
 
   def current_activity
-    UserMailer.daily_activity_email(@user).deliver_now
+    UserMailer.daily_activity_email(@user).deliver_later
   end
 
 

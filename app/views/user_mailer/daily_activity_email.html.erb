@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.first_name.capitalize %></h1>
+    <p>
+      You have a daily activity to do towards your goal of <%= @user.high_level_goal %>.
+      Your activity today is 
+      <% @user.one_month_goals.each do |goal| %>
+       <% goal.activities.each do |act| %>
+        <h3><%= link_to act.title, act %></h3>
+        <p><%= act.description %></p>
+         <p><%= act.score %>%</p><br>
+      <% end %>
+      <% end %>
+    </p>
+    <p>
+      To check this task as complete, just follow this link: <a href="http://wynning.co"><%= @url %></a>
+    </p>
+    <p>Have a productive day towards your goal!</p>
+  </body>
+</html>
