@@ -22,6 +22,7 @@ class ActivitiesController < ApplicationController
 
      respond_to do |format|
       if @activity.save
+        
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
         format.json { render :show, status: :created, location: @Activity }
       else
@@ -30,6 +31,11 @@ class ActivitiesController < ApplicationController
       end
     end
   end
+
+  def current_activity
+    UserMailer.daily_activity_email(@user).deliver_now
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -43,4 +49,6 @@ class ActivitiesController < ApplicationController
     def activity_params
       params.require(:activity).permit(:title, :description, :one_month_goal_id)
     end
+
+
 end
