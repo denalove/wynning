@@ -2,6 +2,10 @@
   <% @one_month_goal.activities.each do |act| %>
     <h3><%= link_to act.title, act %></h3>
     <p><%= act.description %></p>
+    <!-- Colored icon button -->
+      <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+        <i class="material-icons">mood</i>
+      </button>
   <% end %>
   <%= render 'activities/form' %>
 <p><%= link_to "Back to your Dashboard", @user %></p>
