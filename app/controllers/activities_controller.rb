@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    redirect_to current_user
+    redirect_to @activity.one_month_goal
   end
 
   def new
@@ -17,8 +17,6 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new activity_params
     @activity.one_month_goal_id = @one_month_goal.id
-    @activity.start = Time.now
-
 
      respond_to do |format|
       if @activity.save

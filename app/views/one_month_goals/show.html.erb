@@ -1,11 +1,7 @@
-<h2>Here you can see your progress toward your One Month Goal.</h2>
-<% if @one_month_goal.activities.blank? %>
-  <%= render 'activities/form' %>
-<% else %>
+<h1>Here you can see your progress toward your One Month Goal.</h1>
   <% @one_month_goal.activities.each do |act| %>
     <h3><%= link_to act.title, act %></h3>
     <p><%= act.description %></p>
-    <p><%= act.score %>%<p>
   <% end %>
-<% end %>
+  <%= render 'activities/form' %>
 <p><%= link_to "Back to your Dashboard", @user %></p>
