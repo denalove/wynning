@@ -108,7 +108,7 @@ GEM
     notiffany (0.0.7)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    pg (0.18.1)
+    pg (0.18.2)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -200,16 +200,10 @@ DEPENDENCIES
   guard-minitest (= 2.3.1)
   jbuilder (~> 2.0)
   jquery-rails
-
-  minitest (~> 5.7.0)
-  minitest-reporters (~> 1.0.19)
-  pg (= 0.18.2)
-
   mini_backtrace (= 0.1.3)
   minitest (~> 5.7.0)
   minitest-reporters (~> 1.0.19)
   pg (= 0.18.2)
-
   rails (= 4.2.3)
   rails_12factor
   sass-rails (~> 5.0)
