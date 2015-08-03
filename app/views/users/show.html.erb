@@ -1,16 +1,17 @@
-<h1> THIS IS MY PROFILE!!!!!!</h1>
+<br>
+<div class="mdl-typography--display-1-color-contrast">THIS IS MY PROFILE!!!!!!</div>
 
 <p>Hi <%=@user.first_name %>. We are glad you've decided to end your loser ways!</p>
 <p> Your goal of <%= @user.high_level_goal %> is cute... </p>
 <p> We will now spam your inbox at <%= @user.email %> and call you constantly at <%=@user.phone_number %>
 
-<h2> One Month Goals</h2>
+<h3> One Month Goals</h3>
 <% if @user.one_month_goals.blank? %>
   <p>Add a short term goal that should take no longer than a month to complete, Tubby!</p>
   <%= render 'one_month_goals/form' %>
 <% else %>
   <% @user.one_month_goals.each do |gol| %>
-    <h3><%= link_to gol.title, gol %></h3>
+    <h4><%= link_to gol.title, gol %></h4>
     <p><%= gol.description %></p>
   <% end %>
 <% end %>

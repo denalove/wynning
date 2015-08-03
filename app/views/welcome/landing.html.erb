@@ -1,70 +1,34 @@
-<!DOCTYPE HTML>
 
-  <head>
-    <title>
-      Wynning!
-    </title>
-
-    <% if current_user %>
-        <p id="login">Welcome, <%= current_user.first_name.capitalize %>  |  <%= link_to "Log out", logout_path, method: "delete" %></p>
-    <% else %>
-      <ul>
-        <p id="login"><%= link_to "Login Loser", new_session_path %>  |  <%= link_to "Signup", new_user_path %></p>
-      </ul>
-    <% end %>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-      <div class="wynning-header">
-        <div class="mdl-layout__header-row">
-          <span class="wynning-title mdl-layout-title">
-            <img class="wynning-logo-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
-          </span>
-          <!-- Add spacer, to align navigation to the right in desktop -->
-          <div class="wynning-header-spacer mdl-layout-spacer"></div>
-          <div class="wynning-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width" href="/users/new">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search-field" />
-            </div>
-          </div>
-          <!-- Navigation -->
-          <div class="wynning-navigation-container">
-            <nav class="wynning-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/users/new">Sign Up</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/sessions/new">Winners Login</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/sessions/new">Coaches Login</a>
-            </nav>
-          </div>
-
+    
+          
           <span class="wynning-mobile-title mdl-layout-title">
-            <img class="wynning-logo-image ???" src="https://cdn.empowernetwork.com/user_images/post/2013/01/01/9/bb/f62d/540_293_resize_20130101_9bbf62da899140d300f5e02c6c6fb049_jpg.jpg">
+            <img class="wynning-logo-image" src="#">
           </span>
         </div>
       </div>
 
-      <!-- <div class="wynning-drawer mdl-layout__drawer">
+      <div class="wynning-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <img class="wynning-logo-image in slider menu" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+          <img class="wynning-logo-image" src="#">
         </span>
-
-      </div> -->
+       
+      </div>
 
       <div class="wynning-content mdl-layout__content">
         <a name="top"></a>
         <div class="wynning-be-together-section mdl-typography--text-center">
           <div class="wynning-pier">
-
+            <a href>
+              <img src="assets/keys-pier.png">
+            </a>
           <div class="wynning-font wynning-slogan">wynning at life. 15 minutes at a time.</div>
           <div class="wynning-font wynning-sub-slogan">welcome to wynning... reach your goals. win at life.
           </div>
-          <a href>
-            <img src="assets/keys-pier.png">
-          </a>
+
           </div>
 
           <a href="#screens">
+            <button class="wynning-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
               <i class="material-icons">expand_more</i>
             </button>
           </a>
@@ -75,32 +39,32 @@
           <div class="wynning-screens">
             <div class="wynning-wear wynning-screen">
               <a class="wynning-image-link" href="">
-                <img class="wynning-screen-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
-
+                <img class="wynning-screen-image" src="#">
+                <img class="wynning-screen-image" src="#">
               </a>
               <a class="wynning-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Daily reminders</a>
             </div>
             <div class="wynning-phone wynning-screen">
-              <a class="wynning-image-link" href="#">
-                <img class="wynning-screen-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+              <a class="wynning-image-link" href="">
+                <img class="wynning-screen-image" src="#">
               </a>
               <a class="wynning-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Email or Text</a>
             </div>
             <div class="wynning-tablet wynning-screen">
               <a class="wynning-image-link" href="">
-                <img class="wynning-screen-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img class="wynning-screen-image" src="#">
               </a>
               <a class="wynning-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">See what goals your friends are reaching</a>
             </div>
             <div class="wynning-tv wynning-screen">
               <a class="wynning-image-link" href="">
-                <img class="wynning-screen-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img class="wynning-screen-image" src="#">
               </a>
               <a class="wynning-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Personalized Goal Management</a>
             </div>
             <div class="wynning-auto wynning-screen">
               <a class="wynning-image-link" href="">
-                <img class="wynning-screen-image" src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img class="wynning-screen-image" src="#">
               </a>
               <a class="wynning-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Coming Soon: Speak Live with A Life Coach</a>
             </div>
@@ -110,17 +74,11 @@
           <div class="wynning-wear-band">
             <div class="wynning-wear-band-text">
               <div class="mdl-typography--display-2 mdl-typography--font-thin">The Best Goal Management App</div>
-              <br>
               <p class="mdl-typography--headline mdl-typography--font-thin">
-                <em>“Identify your goals, and give your power and energy to the solutions.”</em><br>
-
                 Wynning works perfectly with your busy lifestyle. It's easy to begin. Spend 15 minutes a day of focused, dedicated time towards your dreams and you will reach your goals in no time!
               </p>
-              <p class="mdl-typography--headline mdl-typography--font-thin">
-                So often people forget that the real power of change lies within.  There can be no real change, no step forward, until YOU decide to take that first step.  Here at Wynning!, we help guide you through that first step towards the best life for you!
-              </p>
               <p>
-                <a class="mdl-typography--font-regular mdl-typography--text-uppercase wynning-alt-link" href="logout_path">
+                <a class="mdl-typography--font-regular mdl-typography--text-uppercase wynning-alt-link" href="">
                   Sign up to get started&nbsp;<i class="material-icons">chevron_right</i>
                 </a>
               </p>
@@ -143,7 +101,7 @@
           <div class="wynning-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img src="#">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Get started on wynning</h4>
@@ -161,7 +119,7 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img src="#">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Create your personalized profile</h4>
@@ -179,7 +137,7 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img src="#">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Share your progress with your friends and family</h4>
@@ -197,7 +155,7 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="http://thechoicedrivenlife.com/wp-content/uploads/2012/04/awinnigattitude.jpg">
+                <img src="#">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Celebrate</h4>
@@ -236,7 +194,6 @@
             <p class="mdl-typography--font-light"> © 2015 Wynning at Life</p>
             <!-- <p class="mdl-typography-font-light">Some features and devices may not be available in all areas</p>
           </div>
-
           <div class="mdl-mega-footer-bottom-section">
             <a class="wynning-link wynning-link-menu mdl-typography-font-light" id="version-dropdown">
               Versions
@@ -265,9 +222,4 @@
         </footer>
       </div>
     </div>
-
-
-
-
-    <!--  </body>
-    </html>
+    
