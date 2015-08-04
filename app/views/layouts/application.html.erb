@@ -6,41 +6,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.css">
-  <link rel="stylesheet" href="styles.css"
+  <link rel="stylesheet" href="styles.css">
 </head>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<body>
+        <h1 class="wynning">WYNNING</h1>
 
-  <div class="wynning-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <span class="wynning-title mdl-layout-title">
-        <h1 class="wynning-logo-image">WYNNING</h1>
-      </span>
-      <!-- Add spacer, to align navigation to the right in desktop -->
-      <div class="wynning-header-spacer mdl-layout-spacer"></div>
-      <div class="wynning-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search-field" />
-        </div>
-      </div>
-      <!-- Navigation -->
       <% if current_user %>
-      <div class="wynning-navigation-container">
-        <nav class="wynning-navigation mdl-navigation">
-          <a class="mdl-navigation__link mdl-typography--text-uppercase">Welcome, <%= current_user.first_name.capitalize %>  |  <%= link_to "Log out", logout_path, method: "delete" %></a>
+      <div class="">
+        <nav class="">
+          <a class="e">Welcome, <%= current_user.first_name.capitalize %>  |  <%= link_to "Log out", logout_path, method: "delete" %></a>
           <% else %>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase"><%= link_to "Login", new_session_path %>  |  <%= link_to "Signup", new_user_path %></a>
+          <a class="m"><%= link_to "Login", new_session_path %>  |  <%= link_to "Signup", new_user_path %></a>
           <% end %>
         </nav>
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 
 <%= yield %>
