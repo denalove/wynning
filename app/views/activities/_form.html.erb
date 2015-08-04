@@ -1,5 +1,6 @@
-<h1>Ok Lardo.. It's time now to figure out how to reach this month's goal</h1>
-<p>What can you do for 15 minutes each day that will help you accomplish your goal?<p>
+<h1>Ok, <%= @user.user_firstname %>! It's time now to figure out how to reach this month's goal!</h1>
+<p>Think about what can you do for 15 minutes each day that will help you accomplish your goal.<p>
+<p> This should be a little step that you can put into your daily routine.</p>
 <%= form_for([@one_month_goal, @activity]) do |f| %>
   <div class="field">
     <%= f.label "Activity Name" %><br>
