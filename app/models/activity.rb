@@ -1,8 +1,10 @@
 class Activity < ActiveRecord::Base
   belongs_to :one_month_goal
 
-  def daily_complete
-
+  def complete
+      self.score ||= 0
+      self.score += 1
+      self.save
   end
 
 end

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'activities/:id/complete' => 'activities#complete', as: 'activities_complete'
   get 'users' => 'users#index'
   get 'welcome' => 'welcome#index'
   delete 'logout' => 'sessions#destroy'

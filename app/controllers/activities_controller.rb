@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_activity, only: [:show, :complete, :edit, :update, :destroy]
   before_action :set_one_month_goal, only: [:create, :index, :one_month_goal]
 
   def index
@@ -7,6 +7,11 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    redirect_to @activity.one_month_goal
+  end
+
+  def complete
+    @activity.complete
     redirect_to @activity.one_month_goal
   end
 
@@ -20,7 +25,7 @@ class ActivitiesController < ApplicationController
 
      respond_to do |format|
       if @activity.save
-        
+
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
         format.json { render :show, status: :created, location: @Activity }
       else
