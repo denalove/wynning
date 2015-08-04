@@ -3,19 +3,35 @@
 <p>This is your first step towards a new you!</p>
 <p>As the ancient Chinese philosopher, Laozi, said, "A journey of a thousand miles begins with a single step."</p>
 <p><%= @user.first_name %>, you too are going to begin this profound, life-changing jouney with a single step.</p>
-<p> Your wrote that your long term goal is to <%= @user.high_level_goal %>.</p>
+<p> You wrote that your long term goal is to <%= @user.high_level_goal %>.</p>
 <p>You are going to recieve a daily reminder at <%= @user.email %> and a notificationa sent to <%=@user.phone_number %>.</p>
 <p>These notifications are there to help you start your day looking forward towards your goal by taking one small step in the right direction,</p>
 <p>a step that you, <%=@user.first_name %>, are going to identify below.</p>
 
 <h3> <%=@user.first_name %>'s One Month Goals!</h3>
-<% if @user.one_month_goals.blank? %>
+
+<% @user.one_month_goals.each do |gol| %>
+  <h4><%= link_to gol.title, gol %></h4>
+  <p><%= gol.description %></p>
+  <% gol.activities.each do |act| %>
+      <% @scr ||= 0 %>
+      <% @scr += act.score %>
+    <%end%>
+    <%= @scr %>
+    <% @scr = 0 %>
+<% end %>
+
+<%# if @user.one_month_goals.blank? %>
+<br>
+<br>
+<br>
+<br>
   <p>Add a short term goal that should take no longer than a month to complete, <%=@user.first_name %>!</p>
   <p>Remember to BE POSITIVE! Use words like CAN, WILL, and SHOULD!</p>
   <%= render 'one_month_goals/form' %>
-<% else %>
-  <% @user.one_month_goals.each do |gol| %>
-    <h4><%= link_to gol.title, gol %></h4>
-    <p><%= gol.description %></p>
-  <% end %>
-<% end %>
+<%# else %>
+<%# @user.one_month_goals.each do |gol| %>
+  <!-- <h4><%#= link_to gol.title, gol %></h4> -->
+  <!-- <p><%#= gol.description %></p> -->
+<%# end %>
+<%# end %>

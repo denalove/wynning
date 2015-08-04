@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+
   def new
   end
 
@@ -7,5 +8,5 @@ class WelcomeController < ApplicationController
 
   def landing
   end
-  
+
 end
