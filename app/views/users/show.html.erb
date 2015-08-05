@@ -10,116 +10,91 @@
 </div><!-- /dena-nav-bar -->
 
 <!-- /Show all Active Goals -->
-<div class="panel panel-default dena-goal-status ">
+<div class="panel panel-default dena-goal-status">
   <div class="panel-heading">
     <h3 class="panel-title">Active Goals</h3>
   </div><!-- /panel-heading -->
-  <div class="panel-body">
+</div>
 
-    <div class="dena-highlevelgoal-list">
-      <ul>
-        <div class="goal-list">
-          <div class="container-fluid">
-            <div class="row">
-              <li>
-                <!-- /Show all high_level_goal -->
-                <div class="col-md-7 highlevelgoal"><%= @user.high_level_goal %>
-                </div>
+<div class="panel-body" style="border-bottom: 1px solid black;">???
+  <div class="dena-highlevelgoal-list">
 
-                <!-- Show all progress bar of high level goal -->
-                <div class="col-md-5">
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= @user.progress %>%">
-
-                      <span class="sr-only">45%</span>
-                    </div><!-- /progress-bar -->
-                  </div><!-- /progress -->
-                </div><!-- /col-md-4 -->
-              </div><!-- /row -->
-              <p class="due_date">Due: Dec 31, 2015 (5 months away)</p>
+    <ul>
+      <div class="goal-list">
+        <div class="container-fluid">
+          <div class="row">
+            <li>
+              <div class="col-md-7 highlevelgoal"><%= @user.high_level_goal %>
+              </div>
+              <div class="col-md-5">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= @user.progress %>%">
+                  </div>
+                  <span class="sr-only">45%</span>
+                </div><!-- /progress -->
+              </div><!-- /col-md-5 -->
             </li>
-
-          </div><!-- /container-fluid -->
-        </div><!-- /goal-list -->
-
-        <ul>
-          <!-- Show all one month level goal within each high level goal -->
-          <div class="panel panel-default dena-sub-goal-list">
-            <div class="panel-heading">
-              <div class="panel-title">
-                <div class="container-fluid">
-                  <div class="row">
-                    <% @user.one_month_goals.each do |gol| %>
-                    <li> 
-                      <div class="col-md-7 dena-sub-goal-list">
-                        <%= gol.title.capitalize %>
-                      </li>
-                    </div>
-
-                    <!-- Show progress of one month goals -->
-                    <div class="col-md-5">
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= @user.progress %>%">
-
-                          <span class="sr-only">45%</span>
-                        </div><!-- /col-md-7 dena-sub-goal-list -->
-                      </div><!-- /progress-bar -->
-                    </div><!-- /progress -->
-                  </div><!-- /col-md-5 -->
-
-                </div><!-- /panel-heading -->
-              </div><!-- /panel panel-default -->
-            </div><!-- /row -->
-          </div><!-- /container-fluid -->
-
-          <div class="panel-body">
-
-            <div class="dena-onemonthgoal-list">
-              
-              <!-- Show end date of one month level goal -->
-              <p><%= gol.end_date %></p></li>
-              <ul>
-                <% gol.activities.each do |act| %>
-
-
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-
-                       <li>
-                        <input type="checkbox" aria-label="activity-check-box">
-                      </span>
-
-                      <!-- Show all activities within each one month goal -->
-                      <%= act.title %>
-                      <% @scr ||= 0 %>
-                      <% if !act.score.nil? %>
-                      <% @scr += act.score %>
-                      <% end %>
-                      
-                      <p>Score <%= @scr %></p>
-                    </li>
-                    <% @scr = 0 %>
-                    <% end %>
-                    <%end%>
-                  </ul>
-
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
-
-
-          </div><!-- /dena-onemonthgoal-list -->
-        </div><!-- /panel-body -->
-      </div><!-- /panel panel-default dena-sub-goal-list-->
+          </div> <!-- row -->
+        </div><!-- /container-fluid -->
+        <p class="due_date">Due: Dec 31, 2015 (5 months away)</p>
+      </div><!-- /goal-list -->
     </ul>
-  </div><!-- /dena-highlevelgoal-list-->
-</div><!-- /panel-body -->
-</div><!-- /panel panel-default dena-goal-status -->
 
+      <ul>
+        <div class="panel panel-default dena-sub-goal-list">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <div class="container-fluid">
+                <div class="row">
+                  <% @user.one_month_goals.each do |gol| %>
+                    <li>
+                    <div class="col-md-7 dena-sub-goal-list">
+                      <%= gol.title.capitalize %>
+                    </div>
+                    </li>
+                  </div> <!-- row -->
+                  <span class="sr-only">45%</span>
+              </div><!-- container fluid -->
+            </div><!-- /panel title -->
+          </div><!-- /panel heading -->
+        </div><!-- /cpanel default sub goal list -->
+      </ul>
 
+      <div class="dena-onemonthgoal-list">1mg!
+        <!-- Show progress of one month goals -->
+        <div class="col-md-5"></div>
+        <div class="progress"></div>
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= @user.progress %>%"></div>
+        <!-- Show end date of one month level goal -->
+        <p><%= gol.end_date %></p></li>
+        <ul>
+          <% gol.activities.each do |act| %>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                 <li>
+                  <input type="checkbox" aria-label="activity-check-box">
+                </span>
+                <!-- Show all activities within each one month goal -->
+                <%= act.title %>
+                <% @scr ||= 0 %>
+                <% if !act.score.nil? %>
+                <% @scr += act.score %>
+                <% end %>
+                <p>Score <%= @scr %></p>
+              </li>
+              <% @scr = 0 %>
+              <% end %>
+              <%end%>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </ul>
+    </div><!-- /dena-onemonthgoal-list -->
 
+  </div>
+</div>
 
 
 <%# if @user.one_month_goals.blank? %>

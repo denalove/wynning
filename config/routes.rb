@@ -7,11 +7,15 @@ Rails.application.routes.draw do
   resources :sessions
 
   resources :users do
+    resources :high_levels
+  end
+
+  resources :high_levels do
     resources :one_month_goals
   end
 
   resources :one_month_goals do
-    resource :activities
+    resources :activities
   end
 
   resources :activities
