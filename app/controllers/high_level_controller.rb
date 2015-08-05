@@ -8,7 +8,7 @@ class HighLevelController < ApplicationController
 
   def show
   	@one_month_goal = OneMonthGoal.new
-  	@one_month_goal = OneMonthGoal.all
+  	@one_month_goal = OneMonthGoals.all
     @activity = Activity.new
     @activities = Activity.all
     @user = current_user
