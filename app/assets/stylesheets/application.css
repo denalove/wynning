@@ -123,12 +123,12 @@ img:last-of-type {
 }
 
 #title {
-  background-image: url("keys-pier2.png");
+  background-image: url("../assets/keys-pier2.png");
    background-attachment: fixed;
 }
 
 #slide1:before {
-  background-image: url("blue-bg.jpg");
+  background-image: url("../assets/blue-bg.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
@@ -145,5 +145,5 @@ img:last-of-type {
 }
 
 #slide4 {
-  background-image: url("blue-bg.jpg");
+  background-image: url("../assets/blue-bg.jpg");
 }
