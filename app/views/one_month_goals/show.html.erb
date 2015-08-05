@@ -11,7 +11,7 @@
     <% @one_month_goal.activities.each do |act| %>
       <% if act.done %>
         <h3><%= act.title %></h3>
-        <p><%= act.description %></p>
+        <p><%= act.due_date %></p>
       <% end %>
   <% end %>
 <%= render 'activities/form' %>
