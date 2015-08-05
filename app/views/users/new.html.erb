@@ -1,7 +1,7 @@
 <h1>Create Profile</h1>
 <%= form_for @user do |f| %>
 	<p>
-		<%= f.label :high_level_goal %>
+		<%= f.label :long_term_goal %>
 		<%= f.text_field :high_level_goal %>
 	</p>
 	<p>
@@ -33,6 +33,6 @@
 		<%= f.password_field :password_confirmation %>
 	</p>
 	<p>
-		<%= f.submit 'Create User', :id => 'create-user' %>
+		<%= f.submit 'Create', :id => 'create-onemonthgoal' %>
 	</p>
 	<% end %>

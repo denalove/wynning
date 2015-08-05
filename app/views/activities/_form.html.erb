@@ -7,8 +7,8 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label :due_date %><br>
+    <%= f.text_field :due_date, :as => :datepicker %>
   </div>
   <div class="actions">
     <%= f.submit %>
