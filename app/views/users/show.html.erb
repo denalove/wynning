@@ -67,16 +67,18 @@
                         <span class="input-group-addon">
                         
                          <li>
-                          <input type="checkbox" aria-label="...">
+                          <input type="checkbox" aria-label="activity-check-box">
                         </span>
-                        list of activites here
+                        
+                        <%= act.title %>                    
                         <% @scr ||= 0 %>
                         <% @scr += act.score %>
-                        <%end%>
+                        
                         <p>Score <%= @scr %></p>
                       </li>
                       <% @scr = 0 %>
                       <% end %>
+                      <%end%>
                     </ul>
 
                   </div><!-- /input-group -->
