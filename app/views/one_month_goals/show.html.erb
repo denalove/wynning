@@ -1,10 +1,18 @@
-<h1>Here you can see your progress toward your One Month Goal.</h1>
+<h1>Here are your in progress activities.</h1>
   <% @one_month_goal.activities.each do |act| %>
-    <h3><%= link_to act.title, act %></h3>
-    <p><%= act.description %></p>
+    <% if !act.done %>
+      <h3><%= link_to act.title, act %></h3>
+      <p><%= act.description %></p>
     <!-- Colored icon button -->
-      <%= link_to "I worked on this activity today", activities_complete_path(act.id) %>
-      <%= act.score %>
+      <%= link_to "Activity Complete!", activities_complete_path(act.id) %>
+    <% end %>
+  <% end %>
+  <h1>Here are your completed activities!</h1>
+    <% @one_month_goal.activities.each do |act| %>
+      <% if act.done %>
+        <h3><%= act.title %></h3>
+        <p><%= act.description %></p>
+      <% end %>
   <% end %>
 <%= render 'activities/form' %>
 <p><%= link_to "Back to your Dashboard", @user %></p>
