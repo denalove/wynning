@@ -6,6 +6,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.integer :membership_level
       t.string :high_level_goal
+      t.string :username, unique: true
+      t.string :password_digest
+      t.string :phone_number
 
       t.timestamps null: false
     end

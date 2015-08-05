@@ -7,6 +7,8 @@ class CreateOneMonthGoals < ActiveRecord::Migration
       t.date :date_done
       t.float :metric
 
+      t.references :high_level, index: true, foreign_key: true
+
       t.timestamps null: false
     end
   end

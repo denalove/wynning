@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 20150805155923) do
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "one_month_goal_id"
     t.boolean  "done"
     t.string   "summary"
     t.date     "last"
     t.integer  "score"
+    t.integer  "one_month_goal_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 20150805155923) do
     t.date     "end_date"
     t.date     "date_done"
     t.float    "metric"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "user_id"
+    t.integer  "high_level_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
-  add_index "one_month_goals", ["user_id"], name: "index_one_month_goals_on_user_id"
+  add_index "one_month_goals", ["high_level_id"], name: "index_one_month_goals_on_high_level_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -56,13 +56,11 @@ ActiveRecord::Schema.define(version: 20150805155923) do
     t.string   "last_name"
     t.integer  "membership_level"
     t.string   "high_level_goal"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
     t.string   "username"
     t.string   "password_digest"
     t.string   "phone_number"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
-
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

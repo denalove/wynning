@@ -4,6 +4,11 @@ class CreateActivities < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.boolean :done
+      t.string :summary
+      t.date :last
+      t.integer :score
+      t.references :one_month_goal, index: true, foreign_key: true
+
 
       t.timestamps null: false
     end
