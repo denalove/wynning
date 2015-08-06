@@ -12,7 +12,7 @@ class ActivitiesController < ApplicationController
 
   def complete
     @activity.complete
-    redirect_to @activity.one_month_goal
+    redirect_to current_user
   end
 
   def new
