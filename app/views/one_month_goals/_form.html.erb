@@ -1,7 +1,7 @@
 <!-- adding remote new -->
 <%#= form_for([@user, @one_month_goal], remote: true) do |f| %>
 <h2>Enter your new short term goal here!</h2>
-<%= form_for([@user, @one_month_goal]) do |f| %>
+<%= form_for([@high_level, @one_month_goal]) do |f| %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
