@@ -37,3 +37,6 @@
 
 // $(document).ready(user_validations);
 // $(document).on('page:load', user_validations);
+//jQuery time
+
+//jQuery time
