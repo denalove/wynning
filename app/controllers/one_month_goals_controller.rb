@@ -1,6 +1,6 @@
 class OneMonthGoalsController < ApplicationController
   before_action :set_one_month_goal, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:create]
+  before_action :set_high_level, only: [:create]
 
   def index
     @one_month_goals = OneMonthGoal.all
@@ -18,7 +18,7 @@ class OneMonthGoalsController < ApplicationController
 
   def create
     @one_month_goal = OneMonthGoal.new one_month_goal_params
-    @one_month_goal.user_id = @user.id
+    @one_month_goal.high_level_id = @high_level.id
 
     respond_to do |format|
       if @one_month_goal.save
@@ -36,11 +36,11 @@ class OneMonthGoalsController < ApplicationController
     def set_one_month_goal
       @one_month_goal = OneMonthGoal.find(params[:id])
     end
-    def set_user
-      @user = User.find(params[:user_id])
+    def set_high_level
+      @high_level = HighLevel.find(params[:high_level_id])
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def one_month_goal_params
-      params.require(:one_month_goal).permit(:title, :description, :user_id)
+      params.require(:one_month_goal).permit(:title, :description, :high_level_id)
     end
 end

@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
 
   def show
-    @one_month_goal = OneMonthGoal.new
+    @high_level = HighLevel.new
+    @high_levels = HighLevel.all
     @user = current_user
   end
 

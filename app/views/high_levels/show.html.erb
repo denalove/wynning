@@ -1,0 +1,7 @@
+<h1>Here are your short term goals.</h1>
+  <% @high_level.one_month_goals.each do |gol| %>
+      <h3><%= link_to gol.title, gol %></h3>
+    <!-- Colored icon button -->
+  <% end %>
+<%= render 'one_month_goals/form' %>
+<p><%= link_to "Back to your Dashboard", current_user %></p>
