@@ -3,6 +3,9 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @high_level = @user.high_levels.build
+    @one_month_goal = @high_level.one_month_goals.build
+    @activity = @one_month_goal.activities.build
   end
 
 
@@ -20,37 +23,47 @@ class UsersController < ApplicationController
   	@user = User.new user_params
     respond_to do |format|
       if @user.save
-       session[:user_id] = @user.id
-       UserMailer.welcome_email(@user).deliver_now
-       format.html { redirect_to @user, notice: "User was successfully created." }
-       format.json { render json: @user, status: :created, location: @user }
-     else
-      format.html { render action: 'new', notice: "User could not be created" }
-      format.json { render json: @user.errors, status: :unprocessable_entity }
+        session[:user_id] = @user.id
+        UserMailer.welcome_email(@user).deliver_now
+        format.html { redirect_to @user, notice: "User was successfully created." }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render action: 'new', notice: "User could not be created" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
-end
 
-def update
-  respond_to do |format|
-    if @user.update(user_params)
-      format.html { redirect_to @user, notice: 'User was successfully updated.' }
-      format.json { render :show, status: :ok, location: @user }
-    else
-      format.html { render :edit }
-      format.json { render json: @user.errors, status: :unprocessable_entity }
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
-end
 
-private
+  private
 
-def set_user
-  @user = User.find(params[:id])
-end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-def user_params
-  params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :high_level_goal, :email, :phone_number)
-end
+  def user_params
+    params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :email, :phone_number,
+      high_levels_attributes: [
+        :title, :due,
+         one_month_goals_attributes: [
+           :title, :end_date,
+           activities_attributes: [
+             :title, :due_date
+           ]
+         ]
+      ]
+    )
+  end
 
 end
