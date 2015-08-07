@@ -6,10 +6,19 @@
     <li role="presentation"><a href="#">Dashboard</a></li>
     <li role="presentation" class="active"><a href="#">Active Goals</a></li>
     <li role="presentation"><a href="#">Completed Goals</a></li>
+    <li><button type="button" class="btn btn-default" aria-label="Add Goal">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button><a href="#">Add goal</a></li>
+
   </ul>
 </div><!-- /dena-nav-bar -->
 
 <!-- /Show all Active Goals -->
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-success glyphicon glyphicon-pencil">Edit Goal</button>
+  <button type="button" class="btn btn-info glyphicon glyphicon-ok">Mark As Done</button>
+  <button type="button" class="btn btn-danger glyphicon glyphicon-trash"></button>
+</div>
 <div class="panel panel-default dena-goal-status">
   <div class="panel-heading">
     <h3 class="panel-title">Active Goals</h3>
@@ -99,6 +108,9 @@
           </div> <!-- panel-header -->
         </div> <!-- panel panel-default dena-sub-goal-list -->
       <%end%>
+      <article>
+        <div class="fb-share-button" data-href="https://localhost:3000" data-layout="button"></div>
+      </article>
 
 
               </div><!-- /input-group -->
