@@ -7,6 +7,7 @@ class CreateActivities < ActiveRecord::Migration
       t.string :summary
       t.date :last
       t.integer :score
+      t.date :due_date
       t.references :one_month_goal, index: true, foreign_key: true
 
 

@@ -15,14 +15,15 @@ body {
 	font-family: arial, verdana;
 }
 /*form styles*/
-#msform {
+#new_user {
 	width: 1100px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
 }
-#msform fieldset {
-	background: white;
+#new_user fieldset {
+	/*background: white;*/
+	background-color: #eeeeee;
 	border: 0 none;
 	border-radius: 3px;
 	/*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
@@ -36,11 +37,11 @@ body {
 	position: absolute;
 }
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
+#new_user fieldset:not(:first-of-type) {
 	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea {
+#new_user input, #new_user textarea {
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -52,7 +53,7 @@ body {
 	font-size: 23px;
 }
 /*buttons*/
-#msform .action-button {
+#new_user .action-button {
 	width: 200px;
 	background: #27AE60;
 	font-weight: bold;
@@ -63,7 +64,7 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
+#new_user .action-button:hover, #new_user .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
 /*headings*/

@@ -50,7 +50,7 @@ class ActivitiesController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.require(:activity).permit(:title, :description, :one_month_goal_id)
+      params.require(:activity).permit(:title, :due_date, :one_month_goal_id)
     end
 
 

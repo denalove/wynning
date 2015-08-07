@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'minitest', '~> 5.7.0'
 
+gem 'twilio-ruby'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -55,6 +56,10 @@ group :test do
 end
 
 group :production do
- gem 'pg', '0.18.1'
+
+ # gem 'pg', '0.18.1'
+
+ gem 'pg'
+
  gem 'rails_12factor'
 end
