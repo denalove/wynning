@@ -22,7 +22,8 @@ body {
 	position: relative;
 }
 #new_user fieldset {
-	background: white;
+	/*background: white;*/
+	background-color: #eeeeee;
 	border: 0 none;
 	border-radius: 3px;
 	/*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
