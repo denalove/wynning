@@ -3,8 +3,9 @@ class User < ActiveRecord::Base
 	has_many :high_levels
 	has_secure_password
 	validates :email, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
-	validates :high_level_goal, presence: true
+	validates :high_levels, presence: true
 	validates :username, presence: true, length: { minimum: 5 }, uniqueness: true
+	accepts_nested_attributes_for :high_levels
 
 	def send_text
 		account_sid = 'AC6ecce9552b7c7536b69cb5daafd65334'

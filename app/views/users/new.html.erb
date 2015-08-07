@@ -1,85 +1,104 @@
 <!-- <h1>Create Profile</h1>
 <%= form_for @user do |f| %>
-	<p>
-		<%= f.label :long_term_goal %>
-		<%= f.text_field :high_level_goal %>
-	</p>
-	<p>
-		<%= f.label :first_name %>
-		<%= f.text_field :first_name %>
-	</p>
-	<p>
-		<%= f.label :last_name %>
-		<%= f.text_field :last_name %>
-	</p>
-	<p>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-	</p>
-	<p>
-		<%= f.label :phone_number %>
-		<%= f.text_field :phone_number %>
-	</p>
-	<p>
-		<%= f.label :username %>
-		<%= f.text_field :username %>
-	</p>
-	<p>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</p>
-	<p>
-		<%= f.label :password_confirmation %>
-		<%= f.password_field :password_confirmation %>
-	</p>
-	<p>
-		<%= f.submit 'Create', :id => 'create-onemonthgoal' %>
-	</p>
-	<% end %> -->
+<p>
+<%= f.label :long_term_goal %>
+<%= f.text_field :high_level_goal %>
+</p>
+<p>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+</p>
+<p>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+</p>
+<p>
+<%= f.label :email %>
+<%= f.text_field :email %>
+</p>
+<p>
+<%= f.label :phone_number %>
+<%= f.text_field :phone_number %>
+</p>
+<p>
+<%= f.label :username %>
+<%= f.text_field :username %>
+</p>
+<p>
+<%= f.label :password %>
+<%= f.password_field :password %>
+</p>
+<p>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
+</p>
+<p>
+<%= f.submit 'Create', :id => 'create-onemonthgoal' %>
+</p>
+<% end %> -->
 
-	<!-- multistep form -->
-<form id="msform">
+<!-- multistep form -->
+<%= form_for(@user) do |f| %>
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Account Setup</li>
 		<li>Social Profiles</li>
 		<li>Personal Details</li>
 	</ul>
+
 	<!-- fieldsets -->
-	<fieldset>
-		<!-- <h2 class="fs-title">What is your Dream?</h2> -->
-		<input type="text" name="dream" placeholder="What is your Dream?" />
-		<h2 class="fs-subtitle">By when do you want to realize your dream?</h2>
-		<input type="date" name="dreamDate" placeholder="When do you want to fulfill your Dream?" />
-		<!-- <input type="password" name="cpass" placeholder="Confirm Password" /> -->
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">One Month Goal</h2>
-		<h3 class="fs-subtitle"></h3>
-		<input type="text" name="One Month Goal" placeholder="What is your One Month Goal?" />
-		<input type="date" name="1monthgoal" placeholder="When do you want to acheive your One Month Goal?" />
-		<!-- <input type="text" name="gplus" placeholder="Google Plus" /> -->
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Activity</h2>
-		<h3 class="fs-subtitle"></h3>
-		<input type="text" name="Activity" placeholder="What is something your can do to reach your One Month Goal?" />
-		<input type="date" name="1monthgoal" placeholder="When do you want to acheive your One Month Goal?" />
-		<!-- <input type="text" name="gplus" placeholder="Google Plus" /> -->
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
+	<%= f.fields_for :high_levels do |hlg| %>
+		<fieldset>
+			<%= hlg.text_field :title, placeholder: "What is your Dream?" %>
+			<h2 class="fs-subtitle">By when do you want to realize your dream?</h2>
+			<%= hlg.date_field :due, placeholder: "When do you want to fulfill your Dream?" %>
+			<input type="button" name="next" class="next action-button" value="Next" />
+		</fieldset>
+		<%= hlg.fields_for :one_month_goals do |omg| %>
+			<fieldset>
+				<h2 class="fs-title">One Month Goal</h2>
+				<h3 class="fs-subtitle"></h3>
+				<%= omg.text_field :title, placeholder:"What is your One Month Goal?" %>
+				<%= omg.date_field :end_date, placeholder:"When do you want to acheive your One Month Goal?" %>"
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="button" name="next" class="next action-button" value="Next" />
+			</fieldset>
+			<%= omg.fields_for :activities do |act| %>
+				<fieldset>
+					<h2 class="fs-title">Activity</h2>
+					<h3 class="fs-subtitle"></h3>
+					<%= act.text_field :title, placeholder: "What is an activity you can do to reach your One Month Goal?" %>
+					<%= act.date_field :due_date, placeholder: "By when do you want to complete this activity?" %>
+					<input type="button" name="previous" class="previous action-button" value="Previous" />
+					<input type="button" name="next" class="next action-button" value="Next" />
+				</fieldset>
+			<% end %>
+		<% end %>
+	<% end %>
+
 	<fieldset>
 		<h2 class="fs-title">Personal Details</h2>
 		<h3 class="fs-subtitle">Let us know who you are!</h3>
-		<input type="text" name="fname" placeholder="First Name" />
-		<input type="text" name="lname" placeholder="Last Name" />
-		<input type="text" name="phone" placeholder="Phone" />
-		<input type="email" name="email" placeholder="E-Mail"/>
+		<%= f.text_field :first_name, placeholder: "First Name" %>
+		<%= f.text_field :last_name, placeholder: "Last Name" %>
+		<%= f.text_field :phone_number, placeholder: "Phone Number" %>
+		<%= f.email_field :email, placeholder:"E-Mail" %>
+		<%= f.text_field :username, placeholder:"Create Username" %>
+		<%= f.password_field :password, placeholder:"Password" %>
+		<%= f.password_field :password_confirmation, placeholder:"Confirm Password" %>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+		<%= f.submit 'Submit', class: "submit action-button"  %>
 	</fieldset>
-</form>
+	<% end %>
+
+	<% if @user.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+		<ul>
+			<% @user.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
