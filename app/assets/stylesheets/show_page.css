@@ -12,7 +12,7 @@ body, p, li, ul, a, h1, h2, h3{
 
 }
 .dena-highlevelgoal-list {
-
+background-color: white;
 }
 
 .highlevelgoal {
@@ -38,4 +38,13 @@ body, p, li, ul, a, h1, h2, h3{
 }
 .dena-sub-goal-list {
   /*padding-left: 19px;*/
+}
+
+.high-level-goal-progress-bar{
+  height:30px;
+  margin-bottom: 0px;
+}
+
+.progress-bar-container{
+  padding-top: 10px;
 }

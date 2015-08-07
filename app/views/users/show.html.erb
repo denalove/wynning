@@ -15,40 +15,43 @@
     <h3 class="panel-title">Active Goals</h3>
   </div><!-- /panel-heading -->
 </div> <!-- panel panel-default dena-goal-status -->
-
-<div class="panel-body" style="border-bottom: 1px solid black;">
-  <div class="dena-highlevelgoal-list">
-
-    <ul>  <!--- done -->
+<div class="col-md-12 dena-highlevelgoal-list">
+  <!-- <div class="panel-body" style=""> -->
+  <!-- </div> -->
+    <!-- <ul>  -->
       <div class="goal-list">
         <div class="container-fluid">
           <div class="row">
-            <li>
-              <div class="col-md-7 highlevelgoal">
-              <div class="col-md-5">
-                <div class="progress">
+            <!-- <li> -->
+              <div class="col-md-12 highlevelgoal">
+                <% @user.high_levels.each do |high| %>
+                <div class='col-md-2'>
+                  <%= link_to high.title.capitalize, high %>
+                </div>
+                <%# title.due %>
 
-                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>%"></div>
-                  <span class="sr-only">45%</span>
-                </div><!-- /progress -->
-              </div><!-- /col-md-5 -->
+                <div class="col-md-10 progress-bar-container">
+                  <div class="progress high-level-goal-progress-bar">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>%">
+                    </div>
+                    <!-- <span class="sr-only">45%</span> -->
+                  </div><!-- /progress -->
+                </div><!-- /col-md-5 -->
+                <p class="col-md-12 due_date">Due: Dec 31, 2015 (5 months away)</p>
             </div><!-- col-md -7 -->
-            </li>
+            <!-- </li> -->
           </div> <!-- row -->
         </div><!-- /container-fluid -->
-        <p class="due_date">Due: Dec 31, 2015 (5 months away)</p>
       </div><!-- /goal-list -->
-    </ul>
-
-      <% @user.high_levels.each do |high| %>
+    <!-- </ul> -->
+</div>
         <div class="panel panel-default dena-sub-goal-list">
           <div class="panel-heading">
             <div class="panel-title">
               <div class="container-fluid">
                 <div class="row">
-                    <%= link_to high.title.capitalize, high %>
-                    <div class="col-md-7 dena-sub-goal-list">
-                      <div class="col-md-5">
+                    <div class="col-md-6 dena-sub-goal-list">
+                      <div class="col-md-4">
                         <div class="progress">
                           <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= high.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= high.progress %>%"></div>
                           <span class="sr-only">45%</span>
@@ -57,11 +60,11 @@
                     <div class="dena-onemonthgoal-list">
                         <% high.one_month_goals.each do |gol| %>
                         <div class="row">
-                          <div class="col-lg-6">
+                          <div class="col-md-6">
                             <div class="input-group">
                                 <!-- <input type="checkbox" aria-label="activity-check-box"> -->
                                 <h3><%= link_to gol.title, gol %></h3>
-                                <div class="col-md-5">
+                                <div class="col-md-6">
                                   <div class="progress">
                                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress %>%">
                                     </div>
@@ -70,7 +73,7 @@
                                 </div> <!-- col md 5 -->
                                 <% gol.activities.each do |act| %>
                                 <div class="row">
-                                  <div class="col-lg-6">
+                                  <div class="col-md-6">
                                     <div class="input-group">
                                         <!-- <input type="checkbox" aria-label="activity-check-box"> -->
                                         <%= link_to act.title, act %>
@@ -104,7 +107,7 @@
         </ul>
     </div><!-- /dena-onemonthgoal-list -->
 
-  
+
 
 
 <%# if @user.one_month_goals.blank? %>
