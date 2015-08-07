@@ -1,8 +1,13 @@
 /*
+<<<<<<< HEAD
 *
 *= require_tree .
 *= require_self
 */
+
+*= require_tree .
+*/
+
 html {
   outline:0
 }

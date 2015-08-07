@@ -1,4 +1,4 @@
-.button {
+/*.button {
   -webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);
   -moz-box-shadow:0 1px 2px rgba(0,0,0,.2);
   box-shadow:0 1px 2px rgba(0,0,0,.2);
@@ -9,7 +9,7 @@
   border:0 none;
   display:inline-block;
   zoom:1;
-/* zoom and *display = ie7 hack for display:inline-block */
+ zoom and *display = ie7 hack for display:inline-block 
   *display:inline;
   color:#fff;
   font-size:16px;
@@ -23,40 +23,40 @@
   outline:none;
   cursor:pointer;
   line-height:normal
-}
+}*/
 
-.button:hover,.button:focus,.button:active {
+/*.button:hover,.button:focus,.button:active {
   text-decoration:none!important;
   color:#fff
 }
-
-.btn {
+*/
+/*.btn {
   text-transform: uppercase;
   font-weight: bold;
-}
+}*/
 
-.btn:hover {color: #fff;}
+/*.btn:hover {color: #fff;}*/
 
-.btn.bucketgreen, 
+/*.btn.bucketgreen, 
 .btn.bucketblue, 
 .btn.bucketgray {
   color: #fff;
-}
+}*/
 
-.btn.bucketgreen:hover {background:#73C084;}
+/*.btn.bucketgreen:hover {background:#73C084;}*/
 
-.btn.bucketblue:hover {background: #1093C7; color: #fff;}
+/*.btn.bucketblue:hover {background: #1093C7; color: #fff;}*/
 
-.btn.bucketgray:hover {background: #CBCBCB; color: #fff;}
+/*.btn.bucketgray:hover {background: #CBCBCB; color: #fff;}
 
 .btn.bucketred:hover {background: #AE4142; color: #fff;}
 
 .button:active {
   position:relative;
-  top:1px
-}
+  top:1px*/
 
-.mini {
+
+/*.mini {
   font-size:10.5px;
   padding:1px 5px
 }
@@ -130,4 +130,4 @@
 
 .googleplus:hover {
   background-color:#9D2A1B
-}
+}*/
