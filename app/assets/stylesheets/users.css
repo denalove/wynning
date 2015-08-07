@@ -15,12 +15,14 @@ body {
 	font-family: arial, verdana;
 }
 /*form styles*/
+
 #new_user {
 	width: 1100px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
 }
+
 #new_user fieldset {
 	/*background: white;*/
 	background-color: #eeeeee;
@@ -36,10 +38,12 @@ body {
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
-/*Hide all except first fieldset*/
+
+   /*Hide all except first fieldset*/
 #new_user fieldset:not(:first-of-type) {
 	display: none;
 }
+
 /*inputs*/
 #new_user input, #new_user textarea {
 	padding: 10px;
