@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805155923) do
+ActiveRecord::Schema.define(version: 20150806024150) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20150805155923) do
     t.string   "summary"
     t.date     "last"
     t.integer  "score"
-    t.date     "due_date"
     t.integer  "one_month_goal_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.date     "due_date"
   end
 
   add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 20150805155923) do
     t.date     "end_date"
     t.date     "date_done"
     t.float    "metric"
-    t.boolean  "done"
     t.integer  "high_level_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.boolean  "done"
   end
 
   add_index "one_month_goals", ["high_level_id"], name: "index_one_month_goals_on_high_level_id"
