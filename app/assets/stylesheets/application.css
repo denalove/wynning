@@ -1,3 +1,8 @@
+/*
+*
+*= require_tree .
+*= require_self
+*/
 html {
   outline:0
 }
@@ -647,13 +652,13 @@ input.placeholder,textarea.placeholder {
   color:#aaa
 }
 
-#follows-by, 
+#follows-by,
 #follows-to {
   text-align: center;
   padding-top: 25px;
 }
 
-#follows-by .avatar, 
+#follows-by .avatar,
 #follows-to .avatar {
   float: none;
   display: inline-block;
@@ -665,7 +670,7 @@ input.placeholder,textarea.placeholder {
   margin: 2px;
 }
 
-#follows-by .more, 
+#follows-by .more,
 #follows-to .more,
 .other-people-doing .more,
 .other-people-like .more {
@@ -686,7 +691,7 @@ input.placeholder,textarea.placeholder {
   -o-transition:all .2s ease-in
 }
 
-#follows-by .more:hover, 
+#follows-by .more:hover,
 #follows-to .more:hover,
 .other-people-doing .more:hover,
 .other-people-like .more:hover {
@@ -694,7 +699,7 @@ input.placeholder,textarea.placeholder {
   background: #d9d9d9;
 }
 
-#follows-by .more i, 
+#follows-by .more i,
 #follows-to .more i {
   margin: 0;
 }
@@ -763,7 +768,7 @@ table tr td,table tr th {
   padding:5px
 }
 
-.even td, 
+.even td,
 .odd td {
   padding: 15px;
 }
@@ -802,7 +807,7 @@ table tr td,table tr th {
 }
 
 #add-a-comment .username {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 #add-a-comment .username strong {
@@ -1010,7 +1015,7 @@ table#itemtable td.draggable:hover span {
   font-size:18px;
   line-height:18px;
   width:100%;
-  padding:20px 15px; 
+  padding:20px 15px;
   border: none;
 }
 
@@ -2461,7 +2466,7 @@ a#add-goal-in-navbar-bck:hover {
   position: relative;
   top: -95px;
 }
- 
+
 .discovery-map-header {
   padding: 20px !important;
   background: #fff;
@@ -4021,7 +4026,7 @@ ul.ui-autocomplete li a.ui-state-focus {
 
 @media (min-width: 1166px) {
 
-  .menu-bar { 
+  .menu-bar {
     left:0;
   }
 
@@ -5048,7 +5053,7 @@ body.item-view .content-part {
   text-align: right;
 }
 
-.bucket-footer-wrapper .nav>li>a:hover, 
+.bucket-footer-wrapper .nav>li>a:hover,
 .bucket-footer-wrapper .nav>li>a:focus {
   border-radius: 4px;
 }
@@ -5183,7 +5188,7 @@ li.item-obj .photo a .photo-overlay .comments-count {
 }
 
 li.item-obj .photo a .photo-overlay .likes-count {
-  
+
 }
 
 .item-list-view li:hover {
@@ -5850,7 +5855,7 @@ body.search .content-part {
   }
 }
 
-@media (max-width: 420px) { 
+@media (max-width: 420px) {
   .bk-breadcrumb .br-left .hidden-mobile {
     display: none !important;
   }
@@ -6152,7 +6157,7 @@ body.search .content-part {
   border: none;
   border-radius: 0;
   padding: 17px 15px;
-} 
+}
 
 .directory-page .directory .map-list {
   width: 50%;
@@ -6304,7 +6309,7 @@ body.notloggedin .filter-sort.stick {
 }
 
 @media (max-width: 1165px) {
-  
+
   .main-content-wrap {
     margin-left: 0;
     background-color:#f4f4f4
@@ -6396,7 +6401,7 @@ body.notloggedin .filter-sort.stick {
 }
 
 @media (max-width: 768px) {
-  
+
   .directory-page .directory .map-list .inner {
     width: 100%;
     margin: 0;
@@ -6771,7 +6776,7 @@ form.contact-form textarea {
   display: inline-block;
 }
 
-.goal-edit-form ul.tagit li.tagit-choice .tagit-close span, 
+.goal-edit-form ul.tagit li.tagit-choice .tagit-close span,
 #main .profile-settings form ul.tagit li.tagit-choice .tagit-close span {
   background: transparent;
   display: none;
@@ -6844,17 +6849,17 @@ form.contact-form textarea {
   border-bottom: 2px solid transparent;
 }
 
-.goal-edit-form a.cke_button_off:hover, 
-.goal-edit-form a.cke_button_off:focus, 
+.goal-edit-form a.cke_button_off:hover,
+.goal-edit-form a.cke_button_off:focus,
 .goal-edit-form a.cke_button_off:active,
-.goal-edit-form a.cke_button_disabled:hover, 
-.goal-edit-form a.cke_button_disabled:focus, 
+.goal-edit-form a.cke_button_disabled:hover,
+.goal-edit-form a.cke_button_disabled:focus,
 .goal-edit-form a.cke_button_disabled:active,
-.profile-settings a.cke_button_off:hover, 
-.profile-settings a.cke_button_off:focus, 
+.profile-settings a.cke_button_off:hover,
+.profile-settings a.cke_button_off:focus,
 .profile-settings a.cke_button_off:active,
-.profile-settings a.cke_button_disabled:hover, 
-.profile-settings a.cke_button_disabled:focus, 
+.profile-settings a.cke_button_disabled:hover,
+.profile-settings a.cke_button_disabled:focus,
 .profile-settings a.cke_button_disabled:active {
   box-shadow: none;
   background: transparent;
@@ -7457,5 +7462,3 @@ background-image: url("http://tholcorealestategroup.com/wp-content/uploads/2015/
 
 
 }
-
-
