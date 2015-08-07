@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'minitest', '~> 5.7.0'
 
+gem 'twilio-ruby'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

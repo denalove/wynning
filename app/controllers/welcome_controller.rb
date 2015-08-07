@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def landing
+    User.send_text
   end
 
 end

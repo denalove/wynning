@@ -95,11 +95,12 @@ $(document).on("ready page:load", function(){
     var valuesToSubmit = $('form').serialize();
     $.ajax({
         type: "POST",
-        url: '/user', //sumbits it to the given url of the form
+        url: '/user/create', //sumbits it to the given url of the form
         data: valuesToSubmit,
         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
     }).success(function(json){
         console.log("success", json);
+        alert("Win!")
     });
   	return false;
   })
