@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150805155923) do
     t.string   "summary"
     t.date     "last"
     t.integer  "score"
-    t.date     "due_due"
+    t.date     "due_date"
     t.integer  "one_month_goal_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
