@@ -1,0 +1,27 @@
+/*.new-stream p {
+	margin: 30px;
+
+}*/
+
+.panel .panel-default {
+	display: inline;
+}
+
+.new-stream {
+	border: 1px solid black;
+	padding-left: 10px;
+}
+
+
+.activity-name {
+	font-size: 20px;
+	font-color: blue;
+	font-weight: 300;
+}
+
+.activity-date {
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	color: gray;
+}
+
