@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'activities/:id/complete' => 'activities#complete', as: 'activities_complete'
   get 'users' => 'users#index'
   get 'welcome' => 'welcome#index'
+  get 'stream' => 'welcome#stream'
   delete 'logout' => 'sessions#destroy'
   get 'send_mail' => 'activities#current_activity'
 

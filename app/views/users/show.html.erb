@@ -47,9 +47,13 @@
           <% if !act.done %>
             <%= link_to "Complete Activity", activities_complete_path(act.id) %>
           <% end %>
+
         <% end %>
       <% end %>
       <% end %>
+
+          <% end %>
+
           <p>Add a SubGoal</p>
           <%= render 'high_levels/form' %>
       </div>
