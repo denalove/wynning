@@ -49,17 +49,17 @@
 	<!-- fieldsets -->
 	<%= f.fields_for :high_levels do |hlg| %>
 		<fieldset>
-			<%= hlg.text_field :title, placeholder: "What is your Dream?" %>
-			<h2 class="fs-subtitle">By when do you want to realize your dream?</h2>
-			<%= hlg.date_field :due, placeholder: "When do you want to fulfill your Dream?" %>
+			<%= hlg.text_field :title, placeholder: "What is your Goal?" %>
+			<h2 class="fs-subtitle">Goal without a target date is a dream</h2>
+			<%= hlg.date_field :due, placeholder: "Goal without a target date is a dream" %>
 			<input type="button" name="next" class="next action-button" value="Next" />
 		</fieldset>
 		<%= hlg.fields_for :one_month_goals do |omg| %>
 			<fieldset>
 				<h2 class="fs-title">One Month Goal</h2>
 				<h3 class="fs-subtitle"></h3>
-				<%= omg.text_field :title, placeholder:"What is your One Month Goal?" %>
-				<%= omg.date_field :end_date, placeholder:"When do you want to acheive your One Month Goal?" %>"
+				<%= omg.text_field :title, placeholder:"What is your Short Term Goal?" %>
+				<%= omg.date_field :end_date, placeholder:"When do you want to acheive your Short Term Goal?" %>"
 				<input type="button" name="previous" class="previous action-button" value="Previous" />
 				<input type="button" name="next" class="next action-button" value="Next" />
 			</fieldset>
@@ -67,7 +67,7 @@
 				<fieldset>
 					<h2 class="fs-title">Activity</h2>
 					<h3 class="fs-subtitle"></h3>
-					<%= act.text_field :title, placeholder: "What is an activity you can do to reach your One Month Goal?" %>
+					<%= act.text_field :title, placeholder: "What is an activity you can do to reach your Short Term Goal?" %>
 					<%= act.date_field :due_date, placeholder: "By when do you want to complete this activity?" %>
 					<input type="button" name="previous" class="previous action-button" value="Previous" />
 					<input type="button" name="next" class="next action-button" value="Next" />
