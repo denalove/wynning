@@ -1,15 +1,19 @@
 <h2>Enter your new short term goal here!</h2>
-<%= form_for([@user, @high_level]) do |f| %>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :due %><br>
-    <%= f.text_field :due, :as => :dateselect %>
-  </div>
+<form class="form inline" role="form">
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for([@user, @high_level]) do |f| %>
+    <div class="form group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form group">
+      <%= f.label :due %><br>
+      <%= f.text_field :due, :as => :dateselect %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
 <% end %>
+</form>

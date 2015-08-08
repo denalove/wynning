@@ -4,6 +4,9 @@ class WelcomeController < ApplicationController
   end
 
   def index
+  end
+
+  def stream
     # This is the user activity stream
     @stream = {}
     @users = User.all
