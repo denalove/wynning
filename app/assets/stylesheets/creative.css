@@ -221,10 +221,11 @@ header .header-content .header-content-inner hr {
 
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(255,255,255,.7);
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
     margin-top: -150px;
+    font-style: bold;
 }
 
 @media(min-width:768px) {
@@ -251,7 +252,7 @@ header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
