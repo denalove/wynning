@@ -3,19 +3,15 @@
 
 }*/
 
-.panel .panel-default {
-	display: inline;
+.panel {
+	margin: 15px 350px 15px 15px;
 }
 
-.new-stream {
-	border: 1px solid black;
-	padding-left: 10px;
-}
 
 
 .activity-name {
 	font-size: 20px;
-	font-color: blue;
+	color: #0000CC;
 	font-weight: 300;
 }
 
@@ -24,4 +20,6 @@
 	font-family: 'Open Sans', sans-serif;
 	color: gray;
 }
-
+.activity-title {
+	margin-bottom: 1px;
+}
