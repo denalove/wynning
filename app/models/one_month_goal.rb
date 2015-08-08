@@ -26,6 +26,7 @@ class OneMonthGoal < ActiveRecord::Base
       @complete &= act.done
     end
     self.done = true if @complete
+    self.save
   end
 
 end

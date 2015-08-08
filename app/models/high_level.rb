@@ -19,4 +19,12 @@ class HighLevel < ActiveRecord::Base
 		end
 	end
 
+  def check
+    @complete = true
+    self.one_month_goals.each do |omg|
+      @complete &= omg.done
+    end
+    self.done = true if @complete
+    self.save
+    end
 end
