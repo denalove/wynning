@@ -186,6 +186,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
+    background-color: #d9edf7;
     background-image: url(keys-pier.png);
     background-position: center;
     -webkit-background-size: cover;
