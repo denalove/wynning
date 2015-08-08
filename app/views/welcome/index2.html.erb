@@ -1,0 +1,23 @@
+<!-- <h1>Hello World</h1> -->
+
+<%# if current_user %>
+    <!-- <p id="login">Welcome, <%#= current_user.first_name.capitalize %>  |  <%#= link_to "Log out", logout_path, method: "delete" %></p> -->
+<%# else %>
+  <!-- <ul> -->
+    <!-- <p id="login"><%#= link_to "Login Loser", new_session_path %>  |  <%#= link_to "Signup", new_user_path %></p> -->
+  <!-- </ul> -->
+<%# end %>
+
+
+
+<%# @stream.each do |key, value| %>
+  <!-- <p><%#= value.first_name %> completed -->
+  <!-- <%#= key.title %> <%#= time_ago_in_words(key.updated_at)%> ago</p> -->
+  <%# end %>
+
+
+
+  <% @stream.each do |key, value| %>
+    <p><%= value[1].first_name %> completed
+    <%= value[0].title %> <%= time_ago_in_words(value[0].created_at)%> ago</p>
+    <% end %>
