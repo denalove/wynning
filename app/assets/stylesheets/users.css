@@ -86,7 +86,7 @@ body {
 }
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
@@ -100,11 +100,17 @@ body {
 	float: left;
 	position: relative;
 }
+.progress{
+	margin-top: 5px;
+	height: 30px;
+	width: 1300px;
+	margin-left: 1rem;
+}
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
 	width: 20px;
-	line-height: 20px;
+	line-height: 50px;
 	display: block;
 	font-size: 10px;
 	color: #333;
