@@ -19,4 +19,18 @@ class User < ActiveRecord::Base
 		  :body => "Hi #{self.first_name}! Have you worked on your goals today?"
 		  )
 	end
+
+	def send_welcome
+		account_sid = 'AC6ecce9552b7c7536b69cb5daafd65334'
+		auth_token = '5c6c37a347bfc7b58f3232384707169e'
+		@client = Twilio::REST::Client.new account_sid, auth_token
+		from = "+14693514517" # Your Twilio number
+		phone = "+1" + self.phone_number
+		@client.account.messages.create(
+			:from => from,
+			:to => phone,
+			:body => "Hi #{self.first_name}! Thanks for joining Wynning! Time to start working towards your deams!"
+			)
+	end
+
 end
