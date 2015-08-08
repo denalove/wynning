@@ -225,7 +225,6 @@ header .header-content .header-content-inner p {
     font-weight: 700;
     color: white;
     margin-top: -150px;
-    font-style: bold;
 }
 
 @media(min-width:768px) {
@@ -290,7 +289,6 @@ header .header-content .header-content-inner p {
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
-}
 }
 
 
