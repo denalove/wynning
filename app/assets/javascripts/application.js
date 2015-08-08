@@ -15,11 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-/*
- *= require_self
- *= require_tree .
-*/
-
 $(document).on("ready page:load", function(){
 
   var current_fs, next_fs, previous_fs; //fieldsets

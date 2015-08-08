@@ -12,12 +12,12 @@
     <div class="panel panel-info">
  -->
   <div class="container">
-    <div style="background:green !important" class="jumbotron">
+    <div style="background:#539C53 !important" class="jumbotron">
       <h1>Your Dream</h1>
           <% @user.high_levels.each do |high| %>
           <div class='col-md-6'><h2><%= link_to high.title.capitalize, high %></h2></div>
             <div class="progress bar" style="width:100%;">
-              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>%"></div>
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>"%></div>
             </div>
               <p class="col-md-12 due_date"><%= high.due %> </p>
     </div>
@@ -25,8 +25,9 @@
 
   <div class="container">
     <div class="panel panel-success">
-      <div class="panel-heading">
-        <h2>One Month Goals</h2></div>
+      <div style="background:#539C53 !important" class="panel-heading">
+        <h2>One Month Goals</h2>
+      </div>
         <div class="panel-body">
           <% high.one_month_goals.each do |gol| %>
             <div class="col-md-6"><h3><%= link_to gol.title, gol %></h3></div>
@@ -48,16 +49,16 @@
           <p class="col-md-12 due_date"><%= act.due_date %> </p>
           <% if !act.done %>
             <%= link_to "Complete Activity", activities_complete_path(act.id) %>
-          <% end %>
 
         <% end %>
       <% end %>
+
       <% end %>
+    <% end %>
 
         
 
-          <p>Add a SubGoal</p>
-          <%= render 'high_levels/form' %>
+
       </div>
     </div>
   </div>
