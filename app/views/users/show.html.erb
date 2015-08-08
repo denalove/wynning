@@ -1,232 +1,61 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="jumbotron vertical-center">
+  <div class="container">
     <h1>My Dashboard</h1>
     <p>Here is where you can track your overall daily progress towards acheiving your Dream!</p>
     <p>Below you can add short term goals and activities to help you move step by step in the right direction.</p>
   </div>
 </div>
-<div class="container">
+<!-- <div class="container">
   <h1>My Goals</h1>
   <div class="well well-sm col-lg-3"><h2>Active Goals</h2></div>
   <div class="panel-group col-lg-6">
     <div class="panel panel-info">
-      <div class="panel-heading"><h2>Your Dream</h2></div>
-        <div class="panel-body">
+ -->
+  <div class="container">
+    <div style="background:green !important" class="jumbotron">
+      <h1>Your Dream</h1>
           <% @user.high_levels.each do |high| %>
-          <div class='col-md-2'><h2><%= link_to high.title.capitalize, high %></h2></div>
-            <div class="progress bar">
+          <div class='col-md-6'><h2><%= link_to high.title.capitalize, high %></h2></div>
+            <div class="progress bar" style="width:100%;">
               <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>%"></div>
             </div>
               <p class="col-md-12 due_date">Due: Dec 31, 2015 (5 months away)</p>
-        </div>
-    <div class="panel panel-info">
-      <div class="panel-heading"><h2>One Month Goals</h2></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2>One Month Goals</h2></div>
         <div class="panel-body">
           <% high.one_month_goals.each do |gol| %>
-            <div class="col-md-2"><h3><%= link_to gol.title, gol %></h3></div>
-              <div class="progress bar">
+            <div class="col-md-6"><h3><%= link_to gol.title, gol %></h3></div>
+              <div class="progress bar" style="width:95%;">
                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress %>%"></div>
               </div>
-          </div>
-    <div class="panel panel-info">
-      <div class="panel-heading"><h2>Activities to accomplish your One Month Goal</h2></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading"><h2>Activities to accomplish your One Month Goal</h2>
+      </div>
         <div class="panel-body">
           <% gol.activities.each do |act| %>
           <h3><%= link_to act.title, act %></h3>
           <% if !act.done %>
             <%= link_to "Complete Activity", activities_complete_path(act.id) %>
           <% end %>
+
+        <% end %>
+      <% end %>
+      <% end %>
+
           <% end %>
+
           <p>Add a SubGoal</p>
           <%= render 'high_levels/form' %>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="dena-top-bar">
-  <h1>My Goals</h1>
-
-</div><!-- /dena-top-bar -->
-<!-- <div class="dena-nav-bar">
-
-</div>    <!-- /dena-top-bar -->
-<div class="dena-nav-bar">
-
-  <ul class="nav nav-tabs">
-    <li role="presentation"><a href="#">Dashboard</a></li>
-    <li role="presentation" class="active"><a href="#">Active Goals</a></li>
-    <li role="presentation"><a href="#">Completed Goals</a></li>
-    <li><button type="button" class="btn btn-default" aria-label="Add Goal">
-  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</button><a href="#">Add goal</a></li> -->
-
-  </ul>
-</div><!-- /dena-nav-bar -->
-
-<!-- /Show all Active Goals -->
-<!-- <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-success glyphicon glyphicon-pencil">Edit Goal</button>
-  <button type="button" class="btn btn-info glyphicon glyphicon-ok">Mark As Done</button>
-  <button type="button" class="btn btn-danger glyphicon glyphicon-trash"></button>
-</div> -->
-<!-- <div class="panel panel-default dena-goal-status">
-  <div class="panel-heading">
-    <h3 class="panel-title">Active Goals</h3>
-  </div><!-- /panel-heading -->
-
-<!-- </div> <!-- panel panel-default dena-goal-status -->
-<!-- <div class="col-md-12 dena-highlevelgoal-list"> -->
-  <!-- <div class="panel-body" style=""> -->
-  <!-- </div> -->
-    <!-- <ul>  -->
-      <!-- <div class="goal-list"> -->
-        <!-- <div class="container-fluid"> -->
-          <!-- <div class="row"> -->
-            <!-- <li> -->
-              <!-- <div class="col-md-12 highlevelgoal"> -->
-
-                <%# title.due %>
-
-                <!-- <div class="col-md-10 progress-bar-container"> -->
-                  <!-- <div class="progress high-level-goal-progress-bar"> -->
-
-                    <!-- <span class="sr-only">45%</span> -->
-                  </div><!-- /progress -->
-                </div><!-- /col-md-5 -->
-
-
-</div> <!-- panel panel-default dena-goal-status -->
-
-<div class="panel-body" style="border-bottom: 1px solid black;">
-  <div class="dena-highlevelgoal-list">
-
-    <ul>  <!--- done -->
-      <div class="goal-list">
-        <div class="container-fluid">
-          <div class="row">
-            <li>
-              <div class="col-md-7 highlevelgoal">
-              <div class="col-md-5">
-                <div class="progress">
-
-                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>%"></div>
-                  <span class="sr-only">45%</span>
-                </div><!-- /progress -->
-              </div><!-- /col-md-5 -->
-
-            </div><!-- col-md -7 -->
-            </li>
-          </div> <!-- row -->
-        </div><!-- /container-fluid -->
-        <p class="due_date">Due: Dec 31, 2015 (5 months away)</p>
-      </div><!-- /goal-list -->
-
-    <!-- </ul> -->
-</div>
-
-                <div class="col-md-12 dena-sub-goal-list">
-
-                          <!-- <div class="col-md-10 progress-bar-container"> -->
-                        <!-- <div class="progress sub goal progressbar"> -->
-                          <!-- <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= high.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= high.progress %>%"> -->
-                          <!-- </div> -->
-
-    </ul>
-
-      <% @user.high_levels.each do |high| %>
-        <div class="panel panel-default dena-sub-goal-list">
-          <div class="panel-heading">
-            <div class="panel-title">
-              <div class="container-fluid">
-                <div class="row">
-                    <%= link_to high.title.capitalize, high %>
-                    <div class="col-md-7 dena-sub-goal-list">
-                      <div class="col-md-5">
-                        <div class="progress">
-                          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= high.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= high.progress %>%"></div>
-                          <span class="sr-only">45%</span>
-
-                        </div> <!-- progress -->
-                      </div> <!-- col-md-5 -->
-                    <div class="dena-onemonthgoal-list">
-
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div class="input-group">
-                                <!-- <input type="checkbox" aria-label="activity-check-box"> -->
-
-
-
-
-                                <h3><%= link_to gol.title, gol %></h3>
-                                <div class="col-md-5">
-                                  <div class="progress">
-                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress %>%">
-                                    </div>
-
-                                    <span class="sr-only">45%</span>
-                                  </div> <!-- progress -->
-                                </div> <!-- col md 5 -->
-
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="input-group">
-                                        <!-- <input type="checkbox" aria-label="activity-check-box"> -->
-
-                                    </div> <!-- input group -->
-                                    <span class="sr-only">45%</span>
-                                  </div> <!-- col lg 6 -->
-                                </div> <!-- row -->
-                                <% end %>
-
-                            </div> <!-- input group -->
-                            <span class="sr-only">45%</span>
-                          </div> <!-- col lg 6 -->
-                        </div> <!-- row -->
-                        <% end %>
-                    </div> <!-- one month goal list -->
-                  </div> <!-- col-md-7 dena-sub-goal-list -->
-                </div> <!-- panel panel-default dena-sub-goal-list -->
-      <%end%>
-      <article>
-        <div class="fb-share-button" data-href="https://localhost:3000" data-layout="button"></div>
-      </article>
-
-
-              </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-        </ul>
-    </div><!-- /dena-onemonthgoal-list -->
-
-
-
-
-<%# if @user.one_month_goals.blank? %>
-<br>
-<br>
-<br>
-<br>
-
-<%# else %>
-<%# @user.one_month_goals.each do |gol| %>
-<!-- <h4><%#= link_to gol.title, gol %></h4> -->
-<!-- <p><%#= gol.description %></p> -->
-<%# end %>
-<%# end %>
