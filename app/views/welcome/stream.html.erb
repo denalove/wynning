@@ -15,13 +15,13 @@
   <!-- <%#= key.title %> <%#= time_ago_in_words(key.updated_at)%> ago</p> -->
   <%# end %>
 
-<div class="panel panel-default">
-  <div class="panel-body">
+
     
  
 
   <% @stream.each do |key, value| %>
-  
+    <div class="panel panel-default">
+  <div class="panel-body">
 
     <p>
 
@@ -33,13 +33,16 @@
       <div class="activity-title">
     <%= value[0].title %> 
     </div>
-
+  
     <div class="activity-date">
+      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
       <%= time_ago_in_words(value[0].updated_at)%> ago
       </div>
 
       </p>
-    <% end %>
+     
+         </div>
     </div>
-</div>
+    <% end %>
+ 
 
