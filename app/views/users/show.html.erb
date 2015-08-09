@@ -1,5 +1,11 @@
 <body>
 
+  <div id="shadeHLG"></div>
+  <div id="modalHLG">
+    <%= render 'high_levels/form' %>
+    <button type="button" class="btn btn-success" id="HLGclose">Close</button>
+  </div>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -29,7 +35,7 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> <%= link_to "CLICK HERE", new_high_level_path %> to aim for an additional dream!
+                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> <a href="#" id="HLGLink">CLICK HERE</a> to aim for an additional dream!
                         </div>
                     </div>
                 </div>
@@ -44,14 +50,17 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
+<<<<<<< HEAD
                                         <div class="huge" style="font-size:55px;">26</div>
+=======
+                                        <div class="huge"><%= @stream.count %></div>
+>>>>>>> ae1ba14a4775298611f7b3a5fe36097d63d45074
                                         <div>New Announcements!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left"><%= link_to "View Details", stream_path %></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -162,7 +171,8 @@
                             </div>
                             <div class="panel-footer clearfix">
                                 <div class="pull-right">
-                                    <a href="/high_levels/new" class="btn btn-primary">New Dream</a>
+                                  <a href="#" class="btn btn-primary" id="HLGLink2">New Dream</a>
+                                    <!-- <a href="/high_levels/new" class="btn btn-primary">New Dream</a> -->
                                 </div>
                             </div>
                         </div>
