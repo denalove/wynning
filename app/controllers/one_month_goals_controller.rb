@@ -16,6 +16,9 @@ class OneMonthGoalsController < ApplicationController
     @one_month_goal = OneMonthGoal.new
   end
 
+  def destroy
+    @one_month_goal.destroy
+  end
   def create
     @one_month_goal = OneMonthGoal.new one_month_goal_params
     @one_month_goal.high_level_id = @high_level.id

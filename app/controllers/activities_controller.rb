@@ -15,6 +15,10 @@ class ActivitiesController < ApplicationController
     redirect_to current_user
   end
 
+  def destroy
+    @activity.destroy
+  end
+
   def new
     @activity = Activity.new
   end

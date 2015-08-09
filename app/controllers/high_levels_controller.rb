@@ -30,6 +30,9 @@ class HighLevelsController < ApplicationController
     end
   end
 
+	def destroy
+		@high_level.destroy
+	end
   private
 
     def set_high_level
