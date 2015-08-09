@@ -15,34 +15,30 @@
   <!-- <%#= key.title %> <%#= time_ago_in_words(key.updated_at)%> ago</p> -->
   <%# end %>
 
-
-    
- 
-
+<div id="stream_background">
+  <div id="stream_heading">
+    <i class="fa fa-globe fa-5x"></i>
+    <h1>Global Activity Stream</h1>
+  </div>
+  <br>
   <% @stream.each do |key, value| %>
-    <div class="panel panel-default">
-  <div class="panel-body">
-
-    <p>
-
-    <div class="activity-name">
-      <%= value[1].first_name %> 
-
+  <div class="col-lg-3"></div>
+  <div class="container">
+  <div class="col-lg-8">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <div class="row">
+                  <div class="col-xs-1">
+                      <i class="fa fa-thumbs-o-up fa-5x"></i>
+                  </div>
+                  <div class="col-xs-9 text-left stream_content">
+                      <div class="huge" style="font-size:55px"><%= value[1].first_name %> <%= value[1].last_name %> </div>
+                      <div style="font-size:30px">Completed: <%= value[0].title %> <%= time_ago_in_words(value[0].updated_at)%> ago!</div>
+                  </div>
+              </div>
+          </div>
       </div>
-      completed
-      <div class="activity-title">
-    <%= value[0].title %> 
-    </div>
-  
-    <div class="activity-date">
-      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-      <%= time_ago_in_words(value[0].updated_at)%> ago
-      </div>
-
-      </p>
-     
-         </div>
-    </div>
-    <% end %>
- 
-
+  </div>
+</div>
+<% end %>
+</div>
