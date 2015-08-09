@@ -1,0 +1,14 @@
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :username %>
+    <span class="login_area"><%= text_field_tag :username %></span>
+  </p>
+  <p>
+    <%= label_tag :password %>
+    <span class="login_area"><%= password_field_tag :password %></span>
+  </p>
+  <span id="submit_login">
+    <%= submit_tag 'Login', class: 'btn btn-success' %>
+  </span>
+
+<% end %>

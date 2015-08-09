@@ -12,7 +12,6 @@
     <title>Wynning | Living the Life of Your Dreams</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -33,6 +32,12 @@
 
 <body>
 
+  <div id="shadeLogin"></div>
+  <div id="modalLogin">
+    <%= render 'sessions/form' %>
+    <button type="button" class="btn btn-success" id="close">Close</button>
+  </div>
+
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,7 +48,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand page-scroll" href="/users/new">
+              <a class="navbar-brand page-scroll" href="/welcome">
                   Wynning
               </a>
           </div>
@@ -52,21 +57,20 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                   <li>
-                      <a class="page-scroll" href="/users/" >My Goals</a>
-                  </li>
-                  <li>
                       <a class="page-scroll" href="/stream">Activity</a>
                   </li>
                   <li>
-                      <% if current_user %>
+                    <% if current_user %>
                       <%= link_to "My Dashboard", current_user %>
-                  <% else %>
-                      <a class="page-scroll"><%= link_to "Login", new_session_path %><%= link_to "Signup", new_user_path %></a>
+                    <% else %>
+                      <a href="#" id="loginLink">Login</a>
                   <% end %>
                   </li>
                   <li>
                     <% if current_user %>
                       <%= link_to "Log out", logout_path, method: "delete" %>
+                    <% else %>
+                      <%= link_to "Signup", new_user_path %>
                     <% end %>
                   </li>
 
@@ -77,26 +81,11 @@
       <!-- /.container-fluid -->
   </nav>
 
-
-
+<div id="spacing"></div>
 <%= yield %>
 
 
-<!-- jQuery -->
-    <script src="jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="jquery.easing.min.js"></script>
-    <script src="jquery.fittext.js"></script>
-    <script src="wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="creative.js"></script>
-    <!-- jQuery easing plugin -->
-    <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
-
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
 </body>
 </html>
