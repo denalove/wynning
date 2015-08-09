@@ -106,7 +106,9 @@ button#HLGclose{
   color: white;
   margin-top: 10px;
 }
-
+span#HLGtitle{
+  color: black;
+}
 #addHLG .btn-success{
   margin-top: 10px;
   margin-left: 285px;

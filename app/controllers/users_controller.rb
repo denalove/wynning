@@ -13,6 +13,24 @@ class UsersController < ApplicationController
     @high_level = HighLevel.new
     @high_levels = HighLevel.all
     @user = current_user
+    @users = User.all
+    @stream = {}
+    @users.each do |usr|
+      usr.high_levels.each do |hlg|
+        day = hlg.updated_at.to_i
+        hlg.check
+        @stream[day] = [hlg, usr] if hlg.done
+        hlg.one_month_goals.each do |omg|
+          day = omg.updated_at.to_i
+          omg.check
+          @stream[day] = [omg, usr] if omg.done
+            omg.activities.each do |act|
+              day = act.updated_at.to_i
+              @stream[day] = [act, usr] if act.done
+            end
+        end
+      end
+    end
   end
 
   def index

@@ -43,6 +43,11 @@ $(document).on("ready page:load", function(){
         shadeHLG.style.display= 'block';
         };
 
+        document.getElementById('HLGLink2').onclick= function()  {
+        modalHLG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
         document.getElementById('HLGclose').onclick= function() {
         modalHLG.style.display=shadeHLG.style.display= 'none';
         };

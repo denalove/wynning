@@ -2,7 +2,7 @@
 <%= form_for([@user, @high_level]) do |f| %>
     <div class="form group">
       <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <span id="HLGtitle"><%= f.text_field :title %></span>
     </div>
     <div class="form group">
       <%= f.label :due %><br>
