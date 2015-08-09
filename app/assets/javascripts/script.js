@@ -3,6 +3,19 @@ var template = function(text) {
 };
 
 var main = function() {
+
+  // Adds new item on submit
+  // $('form').on('submit', function() {
+  //   var text = $("#todo").val(),
+  //       html = template(text);
+  //
+  //   $('.list').append(html);
+  //   $("#todo").val("");
+  //
+  //   return false;
+  // });
+
+// var main = function() {
 //
 //   // Adds new item on submit
 //   $('form').on('submit', function() {
@@ -14,6 +27,7 @@ var main = function() {
 //
 //     return false;
 //   });
+
 
   // Instead of...
   // $('.glyphicon-star').on('click', function() {
