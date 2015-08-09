@@ -113,3 +113,27 @@ span#HLGtitle{
   margin-top: 10px;
   margin-left: 285px;
 }
+
+.stream_content{
+  text-align: center;
+  margin-left: 50px;
+}
+
+#stream_background{
+  background-color: #eeeeee;
+}
+
+#stream_heading{
+  text-align: center;
+}
+.fa-globe{
+  padding-top: 20px;
+  padding-left: 370px;
+}
+#stream_heading h1{
+  float: right;
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-right: 360px;
+}
