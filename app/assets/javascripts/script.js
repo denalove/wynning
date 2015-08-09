@@ -5,15 +5,15 @@ var template = function(text) {
 var main = function() {
 
   // Adds new item on submit
-  $('form').on('submit', function() {
-    var text = $("#todo").val(),
-        html = template(text);
-
-    $('.list').append(html);
-    $("#todo").val("");
-
-    return false;
-  });
+  // $('form').on('submit', function() {
+  //   var text = $("#todo").val(),
+  //       html = template(text);
+  //
+  //   $('.list').append(html);
+  //   $("#todo").val("");
+  //
+  //   return false;
+  // });
 
   // Instead of...
   // $('.glyphicon-star').on('click', function() {
