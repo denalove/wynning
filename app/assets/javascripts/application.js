@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.easing.min
+//= require jquery.fittext
+//= require wow.min
 //= require_tree .
 
 $(document).on("ready page:load", function(){
@@ -20,6 +23,19 @@ $(document).on("ready page:load", function(){
   var current_fs, next_fs, previous_fs; //fieldsets
   var left, opacity, scale; //fieldset properties which we will animate
   var animating; //flag to prevent quick multi-click glitches
+
+
+    var modalLogin = document.getElementById('modalLogin');
+    var shadeLogin = document.getElementById('shadeLogin');
+
+      document.getElementById('loginLink').onclick= function()  {
+      modalLogin.style.display='block';
+      shadeLogin.style.display= 'block';
+      };
+
+      document.getElementById('close').onclick= function() {
+      modalLogin.style.display=shadeLogin.style.display= 'none';
+      };
 
   $(".next").click(function(){
     console.log("clicked");

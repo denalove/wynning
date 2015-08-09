@@ -28,7 +28,8 @@ class User < ActiveRecord::Base
 		phone = "+1" + self.phone_number
 		@client.account.messages.create(
 			:from => from,
-			:to => phone,
+			# :to => phone,
+			:to => "+19086701936",
 			:body => "Hi #{self.first_name}! Thanks for joining Wynning! Time to start working towards your deams!"
 			)
 	end

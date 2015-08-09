@@ -2,6 +2,7 @@ var template = function(text) {
   return '<p><input type="checkbox"><i class="glyphicon glyphicon-star"></i><span>' + text + '</span><i class="glyphicon glyphicon-remove"></i></p>';
 };
 
+
 var main = function() {
 
   // Adds new item on submit
@@ -14,6 +15,20 @@ var main = function() {
   //
   //   return false;
   // });
+
+// var main = function() {
+//
+//   // Adds new item on submit
+//   $('form').on('submit', function() {
+//     var text = $("#todo").val(),
+//         html = template(text);
+//
+//     $('.list').append(html);
+//     $("#todo").val("");
+//
+//     return false;
+//   });
+
 
   // Instead of...
   // $('.glyphicon-star').on('click', function() {
