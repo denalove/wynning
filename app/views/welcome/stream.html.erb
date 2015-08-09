@@ -16,8 +16,33 @@
   <%# end %>
 
 
+    
+ 
 
   <% @stream.each do |key, value| %>
-    <p><%= value[1].first_name %> completed
-    <%= value[0].title %> <%= time_ago_in_words(value[0].updated_at)%> ago</p>
+    <div class="panel panel-default">
+  <div class="panel-body">
+
+    <p>
+
+    <div class="activity-name">
+      <%= value[1].first_name %> 
+
+      </div>
+      completed
+      <div class="activity-title">
+    <%= value[0].title %> 
+    </div>
+  
+    <div class="activity-date">
+      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      <%= time_ago_in_words(value[0].updated_at)%> ago
+      </div>
+
+      </p>
+     
+         </div>
+    </div>
     <% end %>
+ 
+

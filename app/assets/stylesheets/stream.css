@@ -1,0 +1,25 @@
+/*.new-stream p {
+	margin: 30px;
+
+}*/
+
+.panel {
+	margin: 15px 350px 15px 15px;
+}
+
+
+
+.activity-name {
+	font-size: 20px;
+	color: #0000CC;
+	font-weight: 300;
+}
+
+.activity-date {
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	color: gray;
+}
+.activity-title {
+	margin-bottom: 1px;
+}
