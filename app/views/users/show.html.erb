@@ -1,5 +1,11 @@
 <body>
 
+  <div id="shadeHLG"></div>
+  <div id="modalHLG">
+    <%= render 'high_levels/form' %>
+    <button type="button" class="btn btn-success" id="HLGclose">Close</button>
+  </div>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -25,7 +31,7 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> Try out <%= link_to "CLICK HERE", new_high_level_path %> to aim for an additional dream!
+                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> Try out <a href="#" id="HLGLink">CLICK HERE</a> to aim for an additional dream!
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,8 @@ $(document).on("ready page:load", function(){
   var current_fs, next_fs, previous_fs; //fieldsets
   var left, opacity, scale; //fieldset properties which we will animate
   var animating; //flag to prevent quick multi-click glitches
-
+  var modalHLG = document.getElementById('modalHLG');
+  var shadeHLG = document.getElementById('shadeHLG');
 
     var modalLogin = document.getElementById('modalLogin');
     var shadeLogin = document.getElementById('shadeLogin');
@@ -31,11 +32,20 @@ $(document).on("ready page:load", function(){
       document.getElementById('loginLink').onclick= function()  {
       modalLogin.style.display='block';
       shadeLogin.style.display= 'block';
-      };
+    };
 
       document.getElementById('close').onclick= function() {
       modalLogin.style.display=shadeLogin.style.display= 'none';
       };
+
+        document.getElementById('HLGLink').onclick= function()  {
+        modalHLG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+        document.getElementById('HLGclose').onclick= function() {
+        modalHLG.style.display=shadeHLG.style.display= 'none';
+        };
 
   $(".next").click(function(){
     console.log("clicked");
