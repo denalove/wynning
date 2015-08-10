@@ -1,10 +1,9 @@
-<div class="container">
-  <div class="well">  <h1>Here are your short term goals.</h1></div>
+<!-- <div id="addSTGArea"> -->
+<div class="container" id="addSTGArea">
+  <!-- <div class="well">  <h1>New Short Term Goal</h1></div> -->
 </div>
-
-      <% @high_level.one_month_goals.each do |gol| %>
-          <h3><%= link_to gol.title, gol %></h3>
-        <!-- Colored icon button -->
-      <% end %>
+<div id="newOneMonth">
     <%= render 'one_month_goals/form' %>
-    <p><%= link_to "Back to your Dashboard", current_user %></p>
+    <p><%= button_to "Back", current_user, :class => 'btn btn-success', :id => 'backtodash' %></p>
+</div>
+<!-- </div> -->

@@ -223,7 +223,9 @@ span#HLGtitle{
    background-color: #ffffff;
    border: 0px;
 }
-
+.well{
+  text-align: center;
+}
 
 @-webkit-keyframes pulse {
  0% {
@@ -262,4 +264,28 @@ transform: scale(1, 1);
 .pulsebuttonhover:hover {
 	-webkit-animation: pulse 1s linear infinite;
 	animation: pulse 1s linear infinite;
+}
+
+#newOneMonth{
+  text-align: center;
+}
+
+#stgbutton{
+  margin-left: 650px;
+  margin-top: 10px;
+}
+
+#backtodash{
+  margin-left: 20px;
+}
+
+.formdate{
+  margin-top: 10px;
+}
+
+#addSTGArea{
+  background-image: url(https://heartofthematterseminars.files.wordpress.com/2010/04/goals1.jpg);
+  background-size:contain;
+  width: 400px;
+  height: 250px;
 }

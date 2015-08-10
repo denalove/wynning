@@ -1,17 +1,18 @@
 <!-- adding remote new -->
 <%#= form_for([@user, @one_month_goal], remote: true) do |f| %>
-<h2>Enter your new short term goal here!</h2>
+<h3>What can you do in the short term to achieve your dream?</h3>
+<br>
 <%= form_for([@high_level, @one_month_goal]) do |f| %>
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <h4><%= f.label "Short term goal" %><br>
+    <%= f.text_field :title %></h4>
   </div>
-  <div class="field">
-    <%= f.label :due_date %><br>
-    <%= f.date_field :end_date %>
+  <div class="field formdate">
+    <h4><%= f.label "Set a due date" %><br>
+    <%= f.date_field :end_date %></h4>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add', :class => 'btn btn-success', :id => "stgbutton" %>
   </div>
 <% end %>
