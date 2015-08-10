@@ -18,7 +18,7 @@
 		</fieldset>
 		<%= hlg.fields_for :one_month_goals do |omg| %>
 			<fieldset>
-				<h2 class="fs-title">One Month Goal</h2>
+				<h2 class="fs-title">Break down your dream into smaller goals</h2>
 				<h3 class="fs-subtitle"></h3>
 				<%= omg.text_field :title, placeholder:"What is your Short Term Goal?" %>
 				<%= omg.date_field :end_date, placeholder:"When do you want to acheive your Short Term Goal?" %>
@@ -27,7 +27,7 @@
 			</fieldset>
 			<%= omg.fields_for :activities do |act| %>
 				<fieldset>
-					<h2 class="fs-title">Activity</h2>
+					<h2 class="fs-title">Pick a specific, measurable, achievable, results-focused, and time- bound activity</h2>
 					<h3 class="fs-subtitle"></h3>
 					<%= act.text_field :title, placeholder: "What is an activity you can do to reach your Short Term Goal?" %>
 					<%= act.date_field :due_date, placeholder: "By when do you want to complete this activity?" %>
