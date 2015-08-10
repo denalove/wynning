@@ -34,4 +34,33 @@ class User < ActiveRecord::Base
 			)
 	end
 
+	def compDream
+		i = 0
+		self.high_levels.each do |hlg|
+			i+=1 if hlg.done
+		end
+	return i
+	end
+
+	def compShort
+		i = 0
+		self.high_levels.each do |hlg|
+			hlg.one_month_goals.each do |omg|
+				i+=1 if omg.done
+			end
+		end
+	return i
+	end
+
+	def compAct
+		i = 0
+		self.high_levels.each do |hlg|
+			hlg.one_month_goals.each do |omg|
+				omg.activities.each do |act|
+					i+=1 if act.done
+				end
+			end
+		end
+	return i
+	end
 end

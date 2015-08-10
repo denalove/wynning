@@ -93,12 +93,20 @@ button#close{
   filter: alpha(opacity=50);
 }
 
-#submit_HLG{
+#addHLG{
   float: left;
   margin: 0 auto;
-  margin-left: 315px;
+  /*margin-left: 35px;*/
   color: black;
   /*margin-left: 10px;*/
+}
+
+#dueHLG{
+  color: black;
+}
+
+#dueHLGspace{
+  margin-top: 10px;
 }
 
 button#HLGclose{
@@ -135,5 +143,68 @@ span#HLGtitle{
   font-size: 60px;
   margin-top: 0px;
   padding-top: 20px;
-  padding-right: 360px;
+  padding-right: 450px;
+}
+
+
+#modalCompHLG {
+  display: none;
+}
+
+
+#modalCompHLG {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#HLGcomplete{
+  margin-left: 330px;
+}
+
+
+
+#modalCompOMG {
+  display: none;
+}
+
+
+#modalCompOMG {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#OMGcomplete{
+  margin-left: 330px;
+}
+
+
+
+
+#modalCompACT {
+  display: none;
+}
+
+
+#modalCompACT {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#ACTcomplete{
+  margin-left: 330px;
 }
