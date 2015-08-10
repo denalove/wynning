@@ -258,3 +258,8 @@ transform: scale(1, 1);
 	-webkit-animation: none;
 	animation:none;
 }
+
+.pulsebuttonhover:hover {
+	-webkit-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}

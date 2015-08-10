@@ -57,28 +57,30 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge" style="font-size:55px;"><%= @stream.count %></div>
-                                        <div>Global Activity Stream!</div>
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="panel-footer">
-                                    <span class="pull-left"><%= link_to "View", stream_path %></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
+                  <a href="/stream">
+                  <div class="col-lg-3 col-md-6 pulsebuttonhover">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <i class="fa fa-comments fa-5x"></i>
+                                  </div>
+                                  <div class="col-xs-9 text-right">
+                                      <div class="huge" style="font-size:55px;"><%= @stream.count %></div>
+                                      <div>Global Activity Stream!</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel-footer">
+                            <span class="pull-left">View<%#= link_to "View", stream_path %></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
+                      </div>
+                    </a>
+                    <a href="#" id="HLGdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-success">
                             <div class="panel-heading">
                                 <div class="row">
@@ -91,7 +93,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" id="HLGdone">
+
                                 <div class="panel-footer">
                                     <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -100,7 +102,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    </a>
+                    <a href="#" id="OMGdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <div class="row">
@@ -113,16 +117,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" id="OMGdone">
+                            <!-- <a href="#" id="OMGdone"> -->
                                 <div class="panel-footer">
                                     <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    </a>
+                    <a href="#" id="ACTdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
                                 <div class="row">
@@ -135,15 +141,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" id="ACTdone">
+                            <!-- <a href="#" id="ACTdone"> -->
                                 <div class="panel-footer">
                                     <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
+                    </a>
                 </div>
                 <!-- /.row -->
 
