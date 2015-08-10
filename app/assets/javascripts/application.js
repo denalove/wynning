@@ -25,7 +25,6 @@ $(document).on("ready page:load", function(){
   var animating; //flag to prevent quick multi-click glitches
   var modalHLG = document.getElementById('modalHLG');
   var shadeHLG = document.getElementById('shadeHLG');
-
     var modalLogin = document.getElementById('modalLogin');
     var shadeLogin = document.getElementById('shadeLogin');
 
@@ -47,6 +46,7 @@ $(document).on("ready page:load", function(){
         modalHLG.style.display='block';
         shadeHLG.style.display= 'block';
         };
+
 
         document.getElementById('HLGclose').onclick= function() {
         modalHLG.style.display=shadeHLG.style.display= 'none';
