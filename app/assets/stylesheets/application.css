@@ -301,3 +301,7 @@ transform: scale(1, 1);
 #newAct{
   text-align: center;
 }
+
+fieldset{
+  font-family:Merriweather,'Helvetica Neue',Arial,sans-serif !important;
+}
