@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
 	def compDream
 		i = 0
 		self.high_levels.each do |hlg|
+			hlg.check
 			i+=1 if hlg.done
 		end
 	return i

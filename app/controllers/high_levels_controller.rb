@@ -32,6 +32,7 @@ class HighLevelsController < ApplicationController
 
 	def destroy
 		@high_level.destroy
+		redirect_to current_user
 	end
   private
 
