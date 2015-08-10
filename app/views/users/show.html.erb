@@ -6,6 +6,21 @@
     <button type="button" class="btn btn-success" id="HLGclose">Close</button>
   </div>
 
+  <div id="modalCompHLG">
+    <%= render 'high_levels/index' %>
+    <button type="button" class="btn btn-success" id="HLGcomplete">Close</button>
+  </div>
+
+  <div id="modalCompOMG">
+    <%= render 'one_month_goals/index' %>
+    <button type="button" class="btn btn-success" id="OMGcomplete">Close</button>
+  </div>
+
+  <div id="modalCompACT">
+    <%= render 'activities/index' %>
+    <button type="button" class="btn btn-success" id="ACTcomplete">Close</button>
+  </div>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -20,7 +35,7 @@
 
 
                         <h1 class="page-header">
-                            Dashboard <small>WELCOME! <%= @user.first_name %></small>
+                            Dashboard <small>WELCOME, <%= @user.first_name.capitalize %>!</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -35,35 +50,37 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> <a href="#" id="HLGLink">CLICK HERE</a> to aim for an additional dream!
+                            <i class="fa fa-info-circle"></i>  <strong>Want to make a new Dream goal?</strong> <a href="#" id="HLGLink" class="pulsebuttonhover">CLICK HERE</a> to aim for an additional dream!
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge" style="font-size:55px;"><%= @stream.count %></div>
-                                        <div>New Announcements!</div>
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="panel-footer">
-                                    <span class="pull-left"><%= link_to "View Details", stream_path %></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
+                  <a href="/stream">
+                  <div class="col-lg-3 col-md-6 pulsebuttonhover">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <i class="fa fa-comments fa-5x"></i>
+                                  </div>
+                                  <div class="col-xs-9 text-right">
+                                      <div class="huge" style="font-size:55px;"><%= @stream.count %></div>
+                                      <div>Global Activity Stream!</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel-footer">
+                            <span class="pull-left">View<%#= link_to "View", stream_path %></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
+                      </div>
+                    </a>
+                    <a href="#" id="HLGdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-success">
                             <div class="panel-heading">
                                 <div class="row">
@@ -71,21 +88,22 @@
                                         <i class="fa fa-rocket fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge" style="font-size:55px;">12</div>
+                                        <div class="huge" style="font-size:55px;"><%= current_user.compDream%></div>
                                         <div>Completed Dreams!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
-                        </div>
+                          </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    </a>
+                    <a href="#" id="OMGdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <div class="row">
@@ -93,21 +111,23 @@
                                         <i class="fa fa-university fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge" style="font-size:55px;">124</div>
+                                        <div class="huge" style="font-size:55px;"><%= current_user.compShort%></div>
                                         <div>Completed Short Term Goals!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <!-- <a href="#" id="OMGdone"> -->
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    </a>
+                    <a href="#" id="ACTdone">
+                    <div class="col-lg-3 col-md-6 pulsebuttonhover">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
                                 <div class="row">
@@ -115,20 +135,21 @@
                                         <i class="fa fa-bullseye fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge" style="font-size:55px;">13</div>
+                                        <div class="huge" style="font-size:55px;"><%= current_user.compAct%></div>
                                         <div>Completed Activities!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <!-- <a href="#" id="ACTdone"> -->
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">View</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
+                    </a>
                 </div>
                 <!-- /.row -->
 
@@ -154,13 +175,20 @@
                             </div>
                             <div class="panel-body">
                               <% @user.high_levels.each do |high| %>
-                              <div class='col-md-10'><h4><%= link_to high.title.capitalize, high %></h4></div>
+                              <% high.check %>
+                              <% if !high.done %>
+                              <div class='col-md-10'><h3><%= high.title.capitalize  %></h3>
+                                <% if high.due %>
+                                 <p class="col-md-12 due_date">Due: <%= high.due %> </p>
+                               <% end %>
+                               <% if high.one_month_goals.count == 0 %>
+                                <p>You dont have any Short Term Goals. Add some to get started on this Dream!</p>
+                                <% end %>
+                                <p><%= link_to "Click here", high, :class => "pulsebuttonhover" %> to add a short term goal to this high level goal.</p></div>
                                 <div class="progress bar" style="width:100%;">
-                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10<%#= @user.progress %>"%></div>
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= high.progress > 0 ? high.progress : 0.5 %>%"></div>
                                 </div>
-                                  <p class="col-md-12 due_date"><%= high.due %> </p>
-
-                                  hello
+                                <% if high.one_month_goals.count > 0 %>
                                   <div class="col-sm-12"> <!-- 2nd outer -->
                                     <div class="panel panel-info">  <!-- 2nd color -->
                                       <div class="panel-heading"> <!-- 2nd heading followed by title -->
@@ -168,30 +196,42 @@
                                       </div>
                                       <div class="panel-body">  <!-- 2nd body -->
                                         <% high.one_month_goals.each do |gol| %>
-                                          <div class="col-md-6"><h3><%= link_to gol.title, gol %></h3></div>
+                                        <% gol.check %>
+                                        <% if !gol.done %>
+                                          <div class="col-md-6"><h3><%= gol.title.capitalize %></h3>
+                                            <% if gol.end_date %>
+                                             <p class="col-md-12 due_date">Due: <%= gol.end_date %> </p>
+                                           <% end %>
+                                           <% if gol.activities.count == 0 %>
+                                            <p>You dont have any activities. Add some to get started on this goal!</p>
+                                            <% end %>
+                                            <p><%= link_to "Click here", gol, :class => "pulsebuttonhover" %> to add an activity to this short term goal.</p></div>
                                             <div class="progress bar" style="width:95%;">
-                                              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress %>%"></div>
-                                              <p class="col-md-12 due_date"><%= gol.end_date %> </p>
+                                              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress > 0 ? gol.progress : 0.5 %>%"></div>
+
                                             </div>
+                                        <% if gol.activities.count > 0 %>
                                         <div class="col-md-12">  <!-- 3rd outer-->
                                           <div class="panel panel-danger"> <!-- 3rd color-->
                                             <div class="panel-heading">
-                                              <h3 class="panel-title"><i class="fa fa-bullseye fa-2x"></i>  Activity</h3>
+                                              <h3 class="panel-title"><i class="fa fa-bullseye fa-2x"></i>  Activities</h3>
                                             </div>
                                               <div class="panel-body">
-                                              activity
                                               <% gol.activities.each do |act| %>
-                                              <h3><%= link_to act.title, act %></h3>
-                                              <p class="col-md-12 due_date"><%= act.due_date %> </p>
-                                              <% if !act.done %>
-                                                <%= link_to "Complete Activity", activities_complete_path(act.id) %>
+                                              <h3><%= act.title.capitalize %></h3>
+                                               <% if act.due_date %>
+                                                <p class="col-md-12 due_date">Due: <%= act.due_date %> </p>
                                               <% end %>
-
+                                              <% if !act.done %>
+                                                <p><%= link_to "Click here", activities_complete_path(act.id), :class => "pulsebuttonhover" %> to mark this activity as completed!</p>
+                                              <% end %>
+                                              <% end %>
                                             </div>
                                           </div>
                                         </div>
-
-
+                                        <% end %>
+                                      <% end %>
+                                      <% end %>
                                       </div>
                                     </div>
                                   </div>
@@ -199,16 +239,12 @@
                                   <% end %>
                                   <% end %>
                                 </div>
-                                <!-- <div id="morris-donut-chart"></div> -->
-                                <div class="text-right">
-                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
 
                             </div>
-
-                            <div class="panel-footer clearfix">
+                            <div id="space_footer"></div>
+                            <div class="panel-footer clearfix" id="footer">
                                 <div class="pull-right">
-                                  <a href="#" class="btn btn-primary" id="HLGLink2">New Dream</a>
+                                  <a href="#" class="btn btn-primary pulsebutton" id="HLGLink2">New Dream</a>
                                     <!-- <a href="/high_levels/new" class="btn btn-primary">New Dream</a> -->
                                 </div>
                             </div>

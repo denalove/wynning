@@ -25,7 +25,7 @@ class OneMonthGoalsController < ApplicationController
 
     respond_to do |format|
       if @one_month_goal.save
-        format.html { redirect_to @one_month_goal, notice: 'Goal was successfully created.' }
+        format.html { redirect_to current_user, notice: 'Goal was successfully created.' }
         format.json { render :show, status: :created, location: @one_month_goal }
       else
         format.html { render :new }

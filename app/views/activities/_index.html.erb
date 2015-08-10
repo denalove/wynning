@@ -1,0 +1,10 @@
+<% current_user.high_levels.each do |hlg| %>
+  <% hlg.one_month_goals.each do |omg| %>
+    <% omg.activities.each do |act| %>
+      <% if act.done %>
+        <h5><%= act.title.capitalize %></h5>
+        <h6>Completed: <%= time_ago_in_words(act.updated_at) %> ago</h6>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end%>

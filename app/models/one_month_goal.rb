@@ -25,7 +25,15 @@ class OneMonthGoal < ActiveRecord::Base
     self.activities.each do |act|
       @complete &= act.done
     end
-    self.done = true if @complete
+    if self.activities.count > 0
+      if @complete
+        self.done = true
+      else
+        self.done = false
+      end
+    else
+     self.done = false
+    end
     self.save
   end
 

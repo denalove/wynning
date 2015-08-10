@@ -1,0 +1,6 @@
+<% current_user.high_levels.each do |hlg| %>
+  <% if hlg.done %>
+  <h3><%= hlg.title.capitalize %></h3>
+  <h4>Completed: <%=time_ago_in_words(hlg.updated_at) %> ago</h4>
+  <% end %>
+<% end %>

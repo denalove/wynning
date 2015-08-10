@@ -1,12 +1,12 @@
-<h2>Enter your new short term goal here!</h2>
+<h2>Enter your new dream here!</h2>
 <%= form_for([@user, @high_level]) do |f| %>
     <div class="form group">
       <%= f.label :title %><br>
       <span id="HLGtitle"><%= f.text_field :title %></span>
     </div>
-    <div class="form group">
+    <div class="form group" id="dueHLGspace">
       <%= f.label :due %><br>
-      <%= f.text_field :due, :as => :dateselect %>
+      <span id="dueHLG"><%= f.date_field :due %></span>
     </div>
 
     <div class="actions" id="addHLG">

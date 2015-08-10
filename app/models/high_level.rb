@@ -24,7 +24,15 @@ class HighLevel < ActiveRecord::Base
     self.one_month_goals.each do |omg|
       @complete &= omg.done
     end
-    self.done = true if @complete
+    if self.one_month_goals.count > 0
+       if @complete
+         self.done = true
+       else
+         self.done = false
+       end
+    else
+      self.done = false
+    end
     self.save
     end
 end
