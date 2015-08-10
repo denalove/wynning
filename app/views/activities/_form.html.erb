@@ -1,16 +1,16 @@
-<h1>Ok, <%= @user.first_name %>! It's time now to figure out how to reach this month's goal!</h1>
-<p>Think about what can you do for 15 minutes each day that will help you accomplish your goal.<p>
-<p> This should be a little step that you can put into your daily routine.</p>
+<h3>What can you do for 15 minutes each day to complete your short term goal?</h3>
+<br>
 <%= form_for([@one_month_goal, @activity]) do |f| %>
   <div class="field">
-    <%= f.label "Activity Name" %><br>
-    <%= f.text_field :title %>
+    <h4><%= f.label "Activity" %><br>
+    <%= f.text_field :title %></h4>
   </div>
-  <div class="field">
-    <%= f.label :due_date %><br>
-    <%= f.date_field :due_date %>
+  <div class="field formdate">
+    <h4><%= f.label "Set a due date" %><br>
+    <%= f.date_field :due_date %></h4>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add', :class => 'btn btn-success', :id => "stgbutton" %>
   </div>
 <% end %>

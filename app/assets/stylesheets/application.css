@@ -277,6 +277,7 @@ transform: scale(1, 1);
 
 #backtodash{
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .formdate{
@@ -288,4 +289,15 @@ transform: scale(1, 1);
   background-size:contain;
   width: 400px;
   height: 250px;
+}
+
+#addACTArea{
+  background-image: url(http://www.stxaviersjaipur.org/images/activities.png);
+  background-size:contain;
+  width: 400px;
+  height: 250px;
+}
+
+#newAct{
+  text-align: center;
 }
