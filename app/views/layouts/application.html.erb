@@ -47,7 +47,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand page-scroll" href="/welcome">
+              <a class="navbar-brand page-scroll pulsebuttonhover" href="/welcome">
                   <em>W</em>ynning
               </a>
           </div>
@@ -56,21 +56,21 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                   <li>
-                      <a class="page-scroll" href="/stream">Activity</a>
+                      <a class="page-scroll pulsebuttonhover" href="/stream">Activity</a>
                   </li>
                   <li>
                     <% if current_user %>
-                      <%= link_to "My Dashboard", current_user %>
+                      <%= link_to "My Dashboard", current_user, :class => "pulsebuttonhover" %>
                     <% else %>
-                      <a href="#" id="loginLink">Login</a>
+                      <a href="#" id="loginLink" class="pulsebuttonhover">Login</a>
                   <% end %>
                   </li>
                   <li>
                     <% if current_user %>
-                      <%= link_to "Log out", logout_path, method: "delete" %>
+                      <%= link_to "Log out", logout_path, method: "delete", :class => "pulsebuttonhover" %>
                       <span id="loginLink"></span>
                     <% else %>
-                      <%= link_to "Signup", new_user_path %>
+                      <%= link_to "Signup", new_user_path, :class => "pulsebuttonhover" %>
                     <% end %>
                   </li>
 
