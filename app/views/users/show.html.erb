@@ -63,15 +63,15 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-default">
+                        <div class="panel panel-success">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
+                                        <i class="fa fa-rocket fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>New Tasks!</div>
+                                        <div class="huge" style="font-size:55px;">12</div>
+                                        <div>Completed Dreams!</div>
                                     </div>
                                 </div>
                             </div>
@@ -85,15 +85,15 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-default">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                        <i class="fa fa-university fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
-                                        <div>New Orders!</div>
+                                        <div class="huge" style="font-size:55px;">124</div>
+                                        <div>Completed Short Term Goals!</div>
                                     </div>
                                 </div>
                             </div>
@@ -107,15 +107,15 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-default">
+                        <div class="panel panel-danger">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-support fa-5x"></i>
+                                        <i class="fa fa-bullseye fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
-                                        <div>Support Tickets!</div>
+                                        <div class="huge" style="font-size:55px;">13</div>
+                                        <div>Completed Activities!</div>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                     <div class="col-lg-12">
                         <div class="panel panel-success">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-rocket fa-2x"></i> Dreams!</h3>
+                                <h3 class="panel-title"><i class="fa fa-rocket fa-2x"></i>  Dreams!</h3>
                             </div>
                             <div class="panel-body">
                               <% @user.high_levels.each do |high| %>
@@ -162,7 +162,7 @@
                                   <div class="col-sm-12"> <!-- 2nd outer -->
                                     <div class="panel panel-info">  <!-- 2nd color -->
                                       <div class="panel-heading"> <!-- 2nd heading followed by title -->
-                                        <h3 class="panel-title"><i class="fa fa-university fa-2x"></i>Short Term Goals</h3>
+                                        <h3 class="panel-title"><i class="fa fa-university fa-2x"></i>  Short Term Goals</h3>
                                       </div>
                                       <div class="panel-body">  <!-- 2nd body -->
                                         <% high.one_month_goals.each do |gol| %>
@@ -175,7 +175,7 @@
                                         <div class="col-md-12">  <!-- 3rd outer-->
                                           <div class="panel panel-danger"> <!-- 3rd color-->
                                             <div class="panel-heading">
-                                              <h3 class="panel-title"><i class="fa fa-bullseye fa-2x"></i>Activity</h3>
+                                              <h3 class="panel-title"><i class="fa fa-bullseye fa-2x"></i>  Activity</h3>
                                             </div>
                                               <div class="panel-body">
                                               <% gol.activities.each do |act| %>
