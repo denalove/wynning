@@ -21,9 +21,9 @@
                     <hr class="light">
                     <p class="text-faded">The secret of getting ahead is getting started. The secret of getting started is breaking your long, complex, overwhelming goals into small, manageable chunks. Use Sub goal feature to chunk it down and stop procrastination</p>
                     <% if current_user %>
-                      <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada" %>
+                      <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada pulsebutton" %>
                     <% else %>
-                      <a href="/users/new" class="btn btn-default btn-xl wow tada">Get Started!</a>
+                      <a href="/users/new" class="btn btn-default btn-xl wow tada pulsebutton">Get Started!</a>
                     <% end %>
                 </div>
             </div>
@@ -178,9 +178,9 @@
             <div class="call-to-action">
                 <h2>What are you waiting for?</h2>
                 <% if current_user %>
-                  <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada" %>
+                  <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada pulsebutton" %>
                 <% else %>
-                  <a href="/users/new" class="btn btn-default btn-xl wow tada">Start achieving your goals</a>
+                  <a href="/users/new" class="btn btn-default btn-xl wow tada pulsebutton">Start achieving your goals</a>
                 <% end %>
             </div>
         </div>

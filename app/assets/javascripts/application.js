@@ -82,6 +82,7 @@ $(document).on("ready page:load", function(){
         document.getElementById('ACTcomplete').onclick= function() {
         modalCompACT.style.display=shadeHLG.style.display= 'none';
         };
+
   $(".next").click(function(){
     console.log("clicked");
   	if(animating) return false;
