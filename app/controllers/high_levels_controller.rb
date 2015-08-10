@@ -30,6 +30,10 @@ class HighLevelsController < ApplicationController
     end
   end
 
+	def destroy
+		@high_level.destroy
+		redirect_to current_user
+	end
   private
 
     def set_high_level
@@ -37,10 +41,11 @@ class HighLevelsController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:user_id])
+			@user = current_user
+      # @user = User.find(params[:user_id])
     end
 
     def high_level_params
-      params.require(:high_level).permit(:title, :user_id)
+      params.require(:high_level).permit(:title, :user_id, :due)
     end
 end

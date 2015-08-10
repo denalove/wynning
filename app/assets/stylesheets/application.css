@@ -6,3 +6,298 @@
 #mainNav{
   background-color: #27AE60;
 }
+
+#spacing{
+  width: 100vw;
+  height: 50px;
+}
+
+body {
+  margin: 0;
+}
+#shadeLogin, #modalLogin {
+  display: none;
+}
+
+#shadeLogin {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#modalLogin {
+  position: fixed;
+  z-index: 101;
+  top: 33%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#modalLogin .login_area{
+  color: black;
+}
+#shadeLogin {
+  background: black;
+  opacity: 0.7;
+  filter: alpha(opacity=50);
+}
+
+.btn-success{
+  float: left;
+  margin: 0 auto;
+  margin-left: 315px;
+  color: black;
+  /*margin-left: 10px;*/
+}
+
+button#close{
+  margin-left: 35px;
+  color: white;
+}
+
+
+#shadeHLG, #modalHLG {
+  display: none;
+}
+
+#shadeHLG {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#modalHLG {
+  position: fixed;
+  z-index: 101;
+  top: 33%;
+  left: 27%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#modalHLG .login_area{
+  color: black;
+}
+#shadeHLG {
+  background: black;
+  opacity: 0.7;
+  filter: alpha(opacity=50);
+}
+
+#addHLG{
+  float: left;
+  margin: 0 auto;
+  /*margin-left: 35px;*/
+  color: black;
+  /*margin-left: 10px;*/
+}
+
+#dueHLG{
+  color: black;
+}
+
+#dueHLGspace{
+  margin-top: 10px;
+}
+
+button#HLGclose{
+  margin-left: 35px;
+  color: white;
+  margin-top: 10px;
+}
+span#HLGtitle{
+  color: black;
+}
+#addHLG .btn-success{
+  margin-top: 10px;
+  margin-left: 285px;
+}
+
+.stream_content{
+  text-align: center;
+  margin-left: 50px;
+}
+
+#stream_background{
+  background-color: #eeeeee;
+}
+
+#stream_heading{
+  text-align: center;
+}
+.fa-globe{
+  padding-top: 20px;
+  padding-left: 370px;
+}
+#stream_heading h1{
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 20px;
+
+}
+
+
+#modalCompHLG {
+  display: none;
+}
+
+
+#modalCompHLG {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#HLGcomplete{
+  margin-left: 330px;
+}
+
+
+
+#modalCompOMG {
+  display: none;
+}
+
+
+#modalCompOMG {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#OMGcomplete{
+  margin-left: 330px;
+}
+
+
+
+
+#modalCompACT {
+  display: none;
+}
+
+
+#modalCompACT {
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  left: 24%;
+  width: 50%;
+  color: #eeeeee;
+  text-align: center;
+}
+
+#ACTcomplete{
+  margin-left: 330px;
+}
+
+#space_footer{
+  width: 100vw;
+  height: 10vh;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:55px;
+   width:100%;
+   background:#999;
+   background-color: #ffffff;
+   border: 0px;
+}
+.well{
+  text-align: center;
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+ -webkit-transform: scale(1, 1);
+}
+ 50% {
+ -webkit-transform: scale(1.1, 1.1);
+}
+ 100% {
+ -webkit-transform: scale(1, 1);
+};
+}
+
+@keyframes pulse {
+ 0% {
+ transform: scale(1, 1);
+}
+ 50% {
+ transform: scale(1.1, 1.1);
+}
+ 100% {
+transform: scale(1, 1);
+};
+}
+
+.pulsebutton {
+	-webkit-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}
+
+.pulsebutton:hover {
+	-webkit-animation: none;
+	animation:none;
+}
+
+.pulsebuttonhover:hover {
+	-webkit-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}
+
+#newOneMonth{
+  text-align: center;
+}
+
+#stgbutton{
+  margin-left: 650px;
+  margin-top: 10px;
+}
+
+#backtodash{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.formdate{
+  margin-top: 10px;
+}
+
+#addSTGArea{
+  background-image: url(https://heartofthematterseminars.files.wordpress.com/2010/04/goals1.jpg);
+  background-size:contain;
+  width: 400px;
+  height: 250px;
+}
+
+#addACTArea{
+  background-image: url(http://www.stxaviersjaipur.org/images/activities.png);
+  background-size:contain;
+  width: 400px;
+  height: 250px;
+}
+
+#newAct{
+  text-align: center;
+}

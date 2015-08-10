@@ -2,9 +2,9 @@ class User < ActiveRecord::Base
 	has_many :one_month_goals
 	has_many :high_levels
 	has_secure_password
-	# validates :email, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+	validates :email, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 	validates :high_levels, presence: true
-	#validates :username, presence: true, length: { minimum: 5 }, uniqueness: true
+	validates :username, presence: true, length: { minimum: 5 }, uniqueness: true
 	accepts_nested_attributes_for :high_levels
 
 	def send_text
@@ -28,9 +28,40 @@ class User < ActiveRecord::Base
 		phone = "+1" + self.phone_number
 		@client.account.messages.create(
 			:from => from,
-			:to => phone,
+			# :to => phone,
+			:to => "+19086701936",
 			:body => "Hi #{self.first_name}! Thanks for joining Wynning! Time to start working towards your deams!"
 			)
 	end
 
+	def compDream
+		i = 0
+		self.high_levels.each do |hlg|
+			hlg.check
+			i+=1 if hlg.done
+		end
+	return i
+	end
+
+	def compShort
+		i = 0
+		self.high_levels.each do |hlg|
+			hlg.one_month_goals.each do |omg|
+				i+=1 if omg.done
+			end
+		end
+	return i
+	end
+
+	def compAct
+		i = 0
+		self.high_levels.each do |hlg|
+			hlg.one_month_goals.each do |omg|
+				omg.activities.each do |act|
+					i+=1 if act.done
+				end
+			end
+		end
+	return i
+	end
 end

@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.easing.min
+//= require jquery.fittext
+//= require wow.min
 //= require_tree .
 
 $(document).on("ready page:load", function(){
@@ -20,6 +23,65 @@ $(document).on("ready page:load", function(){
   var current_fs, next_fs, previous_fs; //fieldsets
   var left, opacity, scale; //fieldset properties which we will animate
   var animating; //flag to prevent quick multi-click glitches
+  var modalHLG = document.getElementById('modalHLG');
+    var modalCompHLG = document.getElementById('modalCompHLG');
+    var modalCompOMG = document.getElementById('modalCompOMG');
+    var modalCompACT = document.getElementById('modalCompACT');
+    var shadeHLG = document.getElementById('shadeHLG');
+    var modalLogin = document.getElementById('modalLogin');
+    var shadeLogin = document.getElementById('shadeLogin');
+
+
+      document.getElementById('loginLink').onclick= function()  {
+      modalLogin.style.display='block';
+      shadeLogin.style.display= 'block';
+      };
+
+      document.getElementById('close').onclick= function() {
+      modalLogin.style.display=shadeLogin.style.display= 'none';
+      };
+
+        document.getElementById('HLGLink').onclick= function()  {
+        modalHLG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+        document.getElementById('HLGLink2').onclick= function()  {
+        modalHLG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+
+        document.getElementById('HLGclose').onclick= function() {
+        modalHLG.style.display=shadeHLG.style.display= 'none';
+        };
+
+        document.getElementById('HLGdone').onclick= function()  {
+        modalCompHLG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+        document.getElementById('HLGcomplete').onclick= function() {
+        modalCompHLG.style.display=shadeHLG.style.display= 'none';
+        };
+
+        document.getElementById('OMGdone').onclick= function()  {
+        modalCompOMG.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+        document.getElementById('OMGcomplete').onclick= function() {
+        modalCompOMG.style.display=shadeHLG.style.display= 'none';
+        };
+
+        document.getElementById('ACTdone').onclick= function()  {
+        modalCompACT.style.display='block';
+        shadeHLG.style.display= 'block';
+        };
+
+        document.getElementById('ACTcomplete').onclick= function() {
+        modalCompACT.style.display=shadeHLG.style.display= 'none';
+        };
 
   $(".next").click(function(){
     console.log("clicked");

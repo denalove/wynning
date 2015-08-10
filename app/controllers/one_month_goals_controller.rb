@@ -16,13 +16,16 @@ class OneMonthGoalsController < ApplicationController
     @one_month_goal = OneMonthGoal.new
   end
 
+  def destroy
+    @one_month_goal.destroy
+  end
   def create
     @one_month_goal = OneMonthGoal.new one_month_goal_params
     @one_month_goal.high_level_id = @high_level.id
 
     respond_to do |format|
       if @one_month_goal.save
-        format.html { redirect_to @one_month_goal, notice: 'Goal was successfully created.' }
+        format.html { redirect_to current_user, notice: 'Goal was successfully created.' }
         format.json { render :show, status: :created, location: @one_month_goal }
       else
         format.html { render :new }
