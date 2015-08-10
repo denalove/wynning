@@ -172,11 +172,13 @@
                               <% high.check %>
                               <% if !high.done %>
                               <div class='col-md-10'><h3><%= high.title.capitalize  %></h3>
+                                <% if high.due %>
+                                 <p class="col-md-12 due_date">Due: <%= high.due %> </p>
+                               <% end %>
                                 <p><%= link_to "Click here", high %> to add a short term goal to this high level goal.</p></div>
                                 <div class="progress bar" style="width:100%;">
                                   <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= high.progress > 0 ? high.progress : 0.5 %>%"></div>
                                 </div>
-                                  <p class="col-md-12 due_date"><%= high.due %> </p>
                                   <div class="col-sm-12"> <!-- 2nd outer -->
                                     <div class="panel panel-info">  <!-- 2nd color -->
                                       <div class="panel-heading"> <!-- 2nd heading followed by title -->
@@ -187,10 +189,13 @@
                                         <% gol.check %>
                                         <% if !gol.done %>
                                           <div class="col-md-6"><h3><%= gol.title.capitalize %></h3>
+                                            <% if gol.end_date %>
+                                             <p class="col-md-12 due_date">Due: <%= gol.end_date %> </p>
+                                           <% end %>
                                             <p><%= link_to "Click here", gol %> to add an activity to this short term goal.</p></div>
                                             <div class="progress bar" style="width:95%;">
                                               <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%= gol.progress %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= gol.progress > 0 ? gol.progress : 0.5 %>%"></div>
-                                              <p class="col-md-12 due_date"><%= gol.end_date %> </p>
+
                                             </div>
                                         <div class="col-md-12">  <!-- 3rd outer-->
                                           <div class="panel panel-danger"> <!-- 3rd color-->
@@ -201,7 +206,7 @@
                                               <% gol.activities.each do |act| %>
                                               <h3><%= act.title.capitalize %></h3>
                                                <% if act.due_date %>
-                                                <p class="col-md-12 due_date"><%= act.due_date %> </p>
+                                                <p class="col-md-12 due_date">Due: <%= act.due_date %> </p>
                                               <% end %>
                                               <% if !act.done %>
                                                 <p><%= link_to "Click here", activities_complete_path(act.id) %> to mark this activity as completed!</p>
@@ -220,8 +225,8 @@
                                 </div>
 
                             </div>
-
-                            <div class="panel-footer clearfix">
+                            <div id="space_footer"></div>
+                            <div class="panel-footer clearfix" id="footer">
                                 <div class="pull-right">
                                   <a href="#" class="btn btn-primary" id="HLGLink2">New Dream</a>
                                     <!-- <a href="/high_levels/new" class="btn btn-primary">New Dream</a> -->

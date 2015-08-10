@@ -20,7 +20,11 @@
                     <h2 class="section-heading">Your Dreams, Made Possible!</h2>
                     <hr class="light">
                     <p class="text-faded">The secret of getting ahead is getting started. The secret of getting started is breaking your long, complex, overwhelming goals into small, manageable chunks. Use Sub goal feature to chunk it down and stop procrastination</p>
-                    <a href="/users/new" class="btn btn-default btn-xl">Get Started!</a>
+                    <% if current_user %>
+                      <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada" %>
+                    <% else %>
+                      <a href="/users/new" class="btn btn-default btn-xl wow tada">Get Started!</a>
+                    <% end %>
                 </div>
             </div>
         </div>
@@ -173,7 +177,11 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>What are you waiting for?</h2>
-                <a href="/users/new" class="btn btn-default btn-xl wow tada">Start achieving your goals</a>
+                <% if current_user %>
+                  <%= link_to "My Dashboard", current_user, :class => "btn btn-default btn-xl wow tada" %>
+                <% else %>
+                  <a href="/users/new" class="btn btn-default btn-xl wow tada">Start achieving your goals</a>
+                <% end %>
             </div>
         </div>
     </aside>

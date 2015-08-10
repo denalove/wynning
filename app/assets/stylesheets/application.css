@@ -139,11 +139,10 @@ span#HLGtitle{
   padding-left: 370px;
 }
 #stream_heading h1{
-  float: right;
   font-size: 60px;
   margin-top: 0px;
   padding-top: 20px;
-  padding-right: 450px;
+
 }
 
 
@@ -207,4 +206,20 @@ span#HLGtitle{
 
 #ACTcomplete{
   margin-left: 330px;
+}
+
+#space_footer{
+  width: 100vw;
+  height: 10vh;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:55px;
+   width:100%;
+   background:#999;
+   background-color: #ffffff;
+   border: 0px;
 }

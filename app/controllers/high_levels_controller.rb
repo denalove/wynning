@@ -45,6 +45,6 @@ class HighLevelsController < ApplicationController
     end
 
     def high_level_params
-      params.require(:high_level).permit(:title, :user_id)
+      params.require(:high_level).permit(:title, :user_id, :due)
     end
 end
