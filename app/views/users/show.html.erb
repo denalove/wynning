@@ -67,7 +67,7 @@
                                   </div>
                                   <div class="col-xs-9 text-right">
                                       <div class="huge" style="font-size:55px;"><%= @stream.count %></div>
-                                      <div>Global Activity Stream!</div>
+                                      <div>Wynner's Circle!</div>
                                   </div>
                               </div>
                           </div>
@@ -177,6 +177,7 @@
                               <% @user.high_levels.each do |high| %>
                               <% high.check %>
                               <% if !high.done %>
+                              <%= image_tag high.img, :class => "goalimg" %>
                               <div class='col-md-10'><h3><%= high.title.capitalize  %></h3>
                                 <% if high.due %>
                                  <p class="col-md-12 due_date">Due: <%= high.due %> </p>

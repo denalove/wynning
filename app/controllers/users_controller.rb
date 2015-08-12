@@ -74,7 +74,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :email, :phone_number,
       high_levels_attributes: [
-        :title, :due,
+        :title, :due, :img,
          one_month_goals_attributes: [
            :title, :end_date,
            activities_attributes: [

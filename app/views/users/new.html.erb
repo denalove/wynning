@@ -14,6 +14,8 @@
 			<%= hlg.text_field :title, placeholder: "What is your Goal?" %>
 			<h2 class="fs-subtitle">Goal without a target date is a dream</h2>
 			<%= hlg.date_field :due, placeholder: "Goal without a target date is a dream" %>
+			<h2 class="fs-subtitle">Add a Picture to see Your Dreams</h2>
+			<%= hlg.text_field :img, placeholder: "Dream Image URL" %>
 			<input type="button" name="next" class="next action-button" value="Next" />
 		</fieldset>
 		<%= hlg.fields_for :one_month_goals do |omg| %>
