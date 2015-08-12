@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20150812143146) do
     t.string   "summary"
     t.date     "last"
     t.integer  "score"
+    t.date     "due_date"
     t.integer  "one_month_goal_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.date     "due_date"
   end
 
   add_index "activities", ["one_month_goal_id"], name: "index_activities_on_one_month_goal_id"
@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(version: 20150812143146) do
     t.date     "end_date"
     t.date     "date_done"
     t.float    "metric"
+    t.boolean  "done"
     t.integer  "high_level_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.boolean  "done"
   end
 
   add_index "one_month_goals", ["high_level_id"], name: "index_one_month_goals_on_high_level_id"
@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 20150812143146) do
     t.string   "phone_number"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "img"
   end
 
 end
