@@ -310,3 +310,7 @@ fieldset{
   float: left;
   height: 100px;
 }
+
+#imageinsert{
+  padding-top: 10px;
+}
