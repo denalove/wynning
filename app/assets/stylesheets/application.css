@@ -14,7 +14,6 @@
 
 body {
   margin: 0;
-  /*font-family:Merriweather,'Helvetica Neue',Arial,sans-serif !important;*/
 }
 #shadeLogin, #modalLogin {
   display: none;
@@ -305,4 +304,13 @@ transform: scale(1, 1);
 
 fieldset{
   font-family:Merriweather,'Helvetica Neue',Arial,sans-serif !important;
+}
+
+.goalimg{
+  float: left;
+  height: 100px;
+}
+
+#imageinsert{
+  padding-top: 10px;
 }
