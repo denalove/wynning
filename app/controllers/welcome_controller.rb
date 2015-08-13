@@ -27,7 +27,7 @@ class WelcomeController < ApplicationController
         end
       end
     end
-  @stream = @stream.sort { |x,y| y<=>x}
+    @stream = @stream.sort { |x,y| y<=>x}
   end
 
   def landing
